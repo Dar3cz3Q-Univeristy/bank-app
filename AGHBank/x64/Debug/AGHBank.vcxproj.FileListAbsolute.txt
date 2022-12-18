@@ -4,3 +4,9 @@ C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\AG
 C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\AGHBank\AGHBank\x64\Debug\AGHBank.vcxproj.GenerateResource.cache
 C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\AGHBank\AGHBank\x64\Debug\AGHBank.LoginForm.resources
 C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\AGHBank\AGHBank\x64\Debug\AGHBank.PasswordForm.resources
+C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\BankApp\AGHBank\x64\Debug\AGHBank.vcxproj.AssemblyReference.cache
+C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\BankApp\AGHBank\x64\Debug\AGHBank.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\BankApp\AGHBank\x64\Debug\AGHBank.LoginForm.resources
+C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\BankApp\AGHBank\x64\Debug\AGHBank.MainForm.resources
+C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\BankApp\AGHBank\x64\Debug\AGHBank.PasswordForm.resources
+C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\BankApp\AGHBank\x64\Debug\AGHBank.vcxproj.GenerateResource.cache

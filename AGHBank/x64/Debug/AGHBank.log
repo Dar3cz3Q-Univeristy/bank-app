@@ -1,9 +1,12 @@
 ﻿  LoginForm.cpp
-C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\AGHBank\AGHBank\LoginForm.h(265,21): warning C4101: 'e': unreferenced local variable
+C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\BankApp\AGHBank\LoginForm.h(265,21): warning C4101: 'e': unreferenced local variable
   MainForm.cpp
+  PasswordForm.cpp
+C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\BankApp\AGHBank\PasswordForm.h(284,21): warning C4101: 'e': unreferenced local variable
   Program.cpp
-C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\AGHBank\AGHBank\LoginForm.h(265,21): warning C4101: 'e': unreferenced local variable
-C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\AGHBank\AGHBank\PasswordForm.h(284,21): warning C4101: 'e': unreferenced local variable
+C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\BankApp\AGHBank\LoginForm.h(265,21): warning C4101: 'e': unreferenced local variable
+C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\BankApp\AGHBank\PasswordForm.h(284,21): warning C4101: 'e': unreferenced local variable
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
   Generating Code...
   LoginForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  AGHBank.vcxproj -> C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\AGHBank\x64\Debug\AGHBank.exe
+  AGHBank.vcxproj -> C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\BankApp\x64\Debug\AGHBank.exe
