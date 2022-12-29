@@ -1,6 +1,13 @@
+  AGHBank.AccountUC.resources - Embedded, ContainedInManifestFile, 
+  AGHBank.BillsUC.resources - Embedded, ContainedInManifestFile, 
+  AGHBank.CreateBill.resources - Embedded, ContainedInManifestFile, 
+  AGHBank.HistoryForm.resources - Embedded, ContainedInManifestFile, 
   AGHBank.LoginForm.resources - Embedded, ContainedInManifestFile, 
   AGHBank.MainForm.resources - Embedded, ContainedInManifestFile, 
   AGHBank.PasswordForm.resources - Embedded, ContainedInManifestFile, 
+  AGHBank.PaymentUC.resources - Embedded, ContainedInManifestFile, 
+  AGHBank.RegisterForm.resources - Embedded, ContainedInManifestFile, 
+  AGHBank.RemoveBill.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly AGHBank, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
 	hash=SHA1, flags=PublicKey
@@ -16,22 +23,69 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
+Class AGHBank.AccountUC: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.UserControl
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 loggedUserID : Public
+Class AGHBank.BillsUC: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.UserControl
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 loggedUserID : Public
+Class AGHBank.CreateBill: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 loggedUserID : Public
+Class AGHBank.HistoryForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 choosedBillID : Public
+Class AGHBank.RemoveBill: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 loggedUserID : Public
 Class User: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     System.String name : Public
+    Int32 id : Public
     Boolean auth : Public
 Class AGHBank.LoginForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
-    User user : Public
+    User person : Public
+    Boolean switchToRegister : Public
 Class AGHBank.MainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 loggedUserID : Public
+  Methods:
+    resetColorsBtns(): PrivateScope, Public, HideBySig
+Class AGHBank.PaymentUC: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.UserControl
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 loggedUserID : Public
 Class AGHBank.PasswordForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
-    System.String LoggingUsername : Public
+    System.String loggingUsername : Public
     Boolean auth : Public
+    Boolean switchToLogin : Public
+Class AGHBank.RegisterForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean switchToLogin : Public
+Class ComboItem: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetTagValue(): PrivateScope, Public, HideBySig

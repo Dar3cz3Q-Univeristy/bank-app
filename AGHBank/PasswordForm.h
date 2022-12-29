@@ -16,12 +16,11 @@ namespace AGHBank {
 	public ref class PasswordForm : public System::Windows::Forms::Form
 	{
 	public:
-		String^ LoggingUsername;
+		String^ loggingUsername;
 		PasswordForm(String^ name)
 		{
 			InitializeComponent();
-			LoggingUsername = name;
-			GreetingLb->Text = "Witaj " + LoggingUsername + "!";
+			loggingUsername = name;
 			//
 			//TODO: Add the constructor code here
 			//
@@ -38,23 +37,17 @@ namespace AGHBank {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^ PasswordErrorLb;
-	protected:
-
-	protected:
-	private: System::Windows::Forms::LinkLabel^ RestorePasswordLink;
+	private: System::Windows::Forms::Label^ passwordErrorLb;
+	private: System::Windows::Forms::LinkLabel^ restorePasswordLink;
 	private: System::Windows::Forms::Panel^ panel2;
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Button^ NextBtn;
-	private: System::Windows::Forms::TextBox^ PasswordInput;
-	private: System::Windows::Forms::Label^ GreetingLb;
-
-
+	private: System::Windows::Forms::Label^ helpLb;
+	private: System::Windows::Forms::Button^ nextBtn;
+	private: System::Windows::Forms::TextBox^ passwordInput;
+	private: System::Windows::Forms::Label^ greetingLb;
 	private: System::Windows::Forms::Panel^ panel1;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::PictureBox^ pictureBox1;
-	private: System::Windows::Forms::LinkLabel^ BackLink;
-
+	private: System::Windows::Forms::Label^ logoLb;
+	private: System::Windows::Forms::PictureBox^ logoBox;
+	private: System::Windows::Forms::LinkLabel^ backLink;
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -69,169 +62,170 @@ namespace AGHBank {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(PasswordForm::typeid));
-			this->PasswordErrorLb = (gcnew System::Windows::Forms::Label());
-			this->RestorePasswordLink = (gcnew System::Windows::Forms::LinkLabel());
+			this->passwordErrorLb = (gcnew System::Windows::Forms::Label());
+			this->restorePasswordLink = (gcnew System::Windows::Forms::LinkLabel());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->NextBtn = (gcnew System::Windows::Forms::Button());
-			this->PasswordInput = (gcnew System::Windows::Forms::TextBox());
-			this->GreetingLb = (gcnew System::Windows::Forms::Label());
+			this->helpLb = (gcnew System::Windows::Forms::Label());
+			this->nextBtn = (gcnew System::Windows::Forms::Button());
+			this->passwordInput = (gcnew System::Windows::Forms::TextBox());
+			this->greetingLb = (gcnew System::Windows::Forms::Label());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->BackLink = (gcnew System::Windows::Forms::LinkLabel());
+			this->logoLb = (gcnew System::Windows::Forms::Label());
+			this->logoBox = (gcnew System::Windows::Forms::PictureBox());
+			this->backLink = (gcnew System::Windows::Forms::LinkLabel());
 			this->panel2->SuspendLayout();
 			this->panel1->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logoBox))->BeginInit();
 			this->SuspendLayout();
 			// 
-			// PasswordErrorLb
+			// passwordErrorLb
 			// 
-			this->PasswordErrorLb->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+			this->passwordErrorLb->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
-			this->PasswordErrorLb->Font = (gcnew System::Drawing::Font(L"Impact", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->passwordErrorLb->Font = (gcnew System::Drawing::Font(L"Impact", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->PasswordErrorLb->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(193)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
+			this->passwordErrorLb->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(193)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
 				static_cast<System::Int32>(static_cast<System::Byte>(20)));
-			this->PasswordErrorLb->Location = System::Drawing::Point(0, 476);
-			this->PasswordErrorLb->Name = L"PasswordErrorLb";
-			this->PasswordErrorLb->Size = System::Drawing::Size(778, 158);
-			this->PasswordErrorLb->TabIndex = 0;
-			this->PasswordErrorLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->passwordErrorLb->Location = System::Drawing::Point(0, 476);
+			this->passwordErrorLb->Name = L"passwordErrorLb";
+			this->passwordErrorLb->Size = System::Drawing::Size(778, 158);
+			this->passwordErrorLb->TabIndex = 0;
+			this->passwordErrorLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
-			// RestorePasswordLink
+			// restorePasswordLink
 			// 
-			this->RestorePasswordLink->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->RestorePasswordLink->AutoSize = true;
-			this->RestorePasswordLink->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular,
+			this->restorePasswordLink->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->restorePasswordLink->AutoSize = true;
+			this->restorePasswordLink->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(238)));
-			this->RestorePasswordLink->Location = System::Drawing::Point(577, 650);
-			this->RestorePasswordLink->Name = L"RestorePasswordLink";
-			this->RestorePasswordLink->Size = System::Drawing::Size(178, 29);
-			this->RestorePasswordLink->TabIndex = 4;
-			this->RestorePasswordLink->TabStop = true;
-			this->RestorePasswordLink->Text = L"Odzyskaj has³o";
+			this->restorePasswordLink->Location = System::Drawing::Point(577, 650);
+			this->restorePasswordLink->Name = L"restorePasswordLink";
+			this->restorePasswordLink->Size = System::Drawing::Size(0, 29);
+			this->restorePasswordLink->TabIndex = 4;
 			// 
 			// panel2
 			// 
-			this->panel2->Controls->Add(this->label3);
-			this->panel2->Controls->Add(this->NextBtn);
-			this->panel2->Controls->Add(this->PasswordInput);
-			this->panel2->Controls->Add(this->GreetingLb);
+			this->panel2->Controls->Add(this->helpLb);
+			this->panel2->Controls->Add(this->nextBtn);
+			this->panel2->Controls->Add(this->passwordInput);
+			this->panel2->Controls->Add(this->greetingLb);
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel2->Location = System::Drawing::Point(0, 120);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(778, 353);
 			this->panel2->TabIndex = 6;
 			// 
-			// label3
+			// helpLb
 			// 
-			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->helpLb->AutoSize = true;
+			this->helpLb->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->label3->Location = System::Drawing::Point(12, 181);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(206, 37);
-			this->label3->TabIndex = 0;
-			this->label3->Text = L"Wpisz has³o:";
+			this->helpLb->Location = System::Drawing::Point(12, 181);
+			this->helpLb->Name = L"helpLb";
+			this->helpLb->Size = System::Drawing::Size(206, 37);
+			this->helpLb->TabIndex = 0;
+			this->helpLb->Text = L"Wpisz has³o:";
 			// 
-			// NextBtn
+			// nextBtn
 			// 
-			this->NextBtn->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->NextBtn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(193)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
+			this->nextBtn->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->nextBtn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(193)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
 				static_cast<System::Int32>(static_cast<System::Byte>(20)));
-			this->NextBtn->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->NextBtn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->nextBtn->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->nextBtn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->NextBtn->ForeColor = System::Drawing::Color::White;
-			this->NextBtn->Location = System::Drawing::Point(619, 286);
-			this->NextBtn->Name = L"NextBtn";
-			this->NextBtn->Size = System::Drawing::Size(147, 60);
-			this->NextBtn->TabIndex = 2;
-			this->NextBtn->Text = L"Dalej";
-			this->NextBtn->UseVisualStyleBackColor = false;
-			this->NextBtn->Click += gcnew System::EventHandler(this, &PasswordForm::NextBtn_Click);
+			this->nextBtn->ForeColor = System::Drawing::Color::White;
+			this->nextBtn->Location = System::Drawing::Point(619, 286);
+			this->nextBtn->Name = L"nextBtn";
+			this->nextBtn->Size = System::Drawing::Size(147, 60);
+			this->nextBtn->TabIndex = 2;
+			this->nextBtn->Text = L"Dalej";
+			this->nextBtn->UseVisualStyleBackColor = false;
+			this->nextBtn->Click += gcnew System::EventHandler(this, &PasswordForm::nextBtn_Click);
 			// 
-			// PasswordInput
+			// passwordInput
 			// 
-			this->PasswordInput->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+			this->passwordInput->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
-			this->PasswordInput->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->passwordInput->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->PasswordInput->Location = System::Drawing::Point(19, 221);
-			this->PasswordInput->Name = L"PasswordInput";
-			this->PasswordInput->PasswordChar = '*';
-			this->PasswordInput->Size = System::Drawing::Size(747, 44);
-			this->PasswordInput->TabIndex = 1;
+			this->passwordInput->Location = System::Drawing::Point(19, 221);
+			this->passwordInput->Name = L"passwordInput";
+			this->passwordInput->PasswordChar = '*';
+			this->passwordInput->Size = System::Drawing::Size(747, 44);
+			this->passwordInput->TabIndex = 1;
+			this->passwordInput->Text = L"zaq1@WSX";
 			// 
-			// GreetingLb
+			// greetingLb
 			// 
-			this->GreetingLb->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
+			this->greetingLb->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->GreetingLb->Location = System::Drawing::Point(12, 3);
-			this->GreetingLb->Name = L"GreetingLb";
-			this->GreetingLb->Size = System::Drawing::Size(754, 98);
-			this->GreetingLb->TabIndex = 0;
-			this->GreetingLb->Text = L"Zaloguj siê";
-			this->GreetingLb->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->greetingLb->Location = System::Drawing::Point(12, 3);
+			this->greetingLb->Name = L"greetingLb";
+			this->greetingLb->Size = System::Drawing::Size(754, 98);
+			this->greetingLb->TabIndex = 0;
+			this->greetingLb->Text = L"Zaloguj siê";
+			this->greetingLb->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(13)), static_cast<System::Int32>(static_cast<System::Byte>(221)));
-			this->panel1->Controls->Add(this->label2);
-			this->panel1->Controls->Add(this->pictureBox1);
+			this->panel1->Controls->Add(this->logoLb);
+			this->panel1->Controls->Add(this->logoBox);
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(778, 120);
 			this->panel1->TabIndex = 5;
 			// 
-			// label2
+			// logoLb
 			// 
-			this->label2->Font = (gcnew System::Drawing::Font(L"Bauhaus 93", 26, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->logoLb->Font = (gcnew System::Drawing::Font(L"Bauhaus 93", 26, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(154, 9);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(468, 102);
-			this->label2->TabIndex = 2;
-			this->label2->Text = L"AGH Bank";
-			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->logoLb->Location = System::Drawing::Point(154, 9);
+			this->logoLb->Name = L"logoLb";
+			this->logoLb->Size = System::Drawing::Size(468, 102);
+			this->logoLb->TabIndex = 2;
+			this->logoLb->Text = L"AGH Bank";
+			this->logoLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
-			// pictureBox1
+			// logoBox
 			// 
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(0, 0);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(148, 120);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox1->TabIndex = 0;
-			this->pictureBox1->TabStop = false;
+			this->logoBox->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"logoBox.Image")));
+			this->logoBox->Location = System::Drawing::Point(0, 0);
+			this->logoBox->Name = L"logoBox";
+			this->logoBox->Size = System::Drawing::Size(148, 120);
+			this->logoBox->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->logoBox->TabIndex = 0;
+			this->logoBox->TabStop = false;
 			// 
-			// BackLink
+			// backLink
 			// 
-			this->BackLink->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
-			this->BackLink->AutoSize = true;
-			this->BackLink->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->backLink->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
+			this->backLink->AutoSize = true;
+			this->backLink->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->BackLink->Location = System::Drawing::Point(14, 650);
-			this->BackLink->Name = L"BackLink";
-			this->BackLink->Size = System::Drawing::Size(89, 29);
-			this->BackLink->TabIndex = 3;
-			this->BackLink->TabStop = true;
-			this->BackLink->Text = L"Powrót";
+			this->backLink->Location = System::Drawing::Point(14, 650);
+			this->backLink->Name = L"backLink";
+			this->backLink->Size = System::Drawing::Size(89, 29);
+			this->backLink->TabIndex = 3;
+			this->backLink->TabStop = true;
+			this->backLink->Text = L"Powrót";
+			this->backLink->LinkClicked += gcnew System::Windows::Forms::LinkLabelLinkClickedEventHandler(this, &PasswordForm::backLink_LinkClicked);
 			// 
 			// PasswordForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(778, 694);
-			this->Controls->Add(this->BackLink);
-			this->Controls->Add(this->PasswordErrorLb);
-			this->Controls->Add(this->RestorePasswordLink);
+			this->Controls->Add(this->backLink);
+			this->Controls->Add(this->passwordErrorLb);
+			this->Controls->Add(this->restorePasswordLink);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MinimumSize = System::Drawing::Size(800, 750);
 			this->Name = L"PasswordForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -240,50 +234,17 @@ namespace AGHBank {
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();
 			this->panel1->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->logoBox))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	private: System::Void PasswordForm_Load(System::Object^ sender, System::EventArgs^ e) {
-	}
 	public:
 		bool auth = false;
-	private: System::Void NextBtn_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ Password = this->PasswordInput->Text;
-		if (Password->Length == 0) {
-			this->PasswordErrorLb->Text = "Nie wpisano has³a!";
-			return;
-		}
-		try {
-			String^ connString = "Data Source=Dar3cz3Q-SQL;Initial Catalog=AGHBank;User ID=sa;Password=zaq1@WSX";
-			SqlConnection sqlConn(connString);
-			sqlConn.Open();
-
-			String^ sqlQuery = "SELECT Username FROM PersonLogins WHERE Username = @Username AND Password = @Password;";
-
-			SqlCommand command(sqlQuery, % sqlConn);
-			command.Parameters->AddWithValue("@Username", LoggingUsername);
-			command.Parameters->AddWithValue("@Password", Password);
-
-			SqlDataReader^ reader = command.ExecuteReader();
-
-			if (reader->Read()) {
-				auth = true;
-				this->Close();
-			}
-			else {
-				//user = nullptr;
-				this->PasswordErrorLb->Text = "B³êdne has³o!";
-			}
-			reader->Close();
-			sqlConn.Close();
-
-		}
-		catch (Exception^ e) {
-			MessageBox::Show("Nie uda³o siê po³¹czyæ z baz¹ danych", "B³¹d po³¹czenia", MessageBoxButtons::OK);
-		}
-	}
+		bool switchToLogin = false;
+	private: System::Void PasswordForm_Load(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void nextBtn_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void backLink_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e);
 	};
 }

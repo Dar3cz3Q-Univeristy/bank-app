@@ -79,6 +79,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4996;4267</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
@@ -108,6 +109,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4996;4267</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
@@ -123,24 +125,73 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AccountUC.cpp" />
+    <ClCompile Include="bcrypt.cpp" />
+    <ClCompile Include="BillsUC.cpp" />
+    <ClCompile Include="blowfish.cpp" />
+    <ClCompile Include="CreateBill.cpp" />
+    <ClCompile Include="HistoryForm.cpp" />
     <ClCompile Include="LoginForm.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="PasswordForm.cpp" />
+    <ClCompile Include="PaymentUC.cpp" />
     <ClCompile Include="Program.cpp" />
+    <ClCompile Include="RegisterForm.cpp" />
+    <ClCompile Include="RemoveBill.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AccountUC.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="bcrypt.h" />
+    <ClInclude Include="BillsUC.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="ComboItem.h" />
+    <ClInclude Include="CreateBill.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Database.h" />
+    <ClInclude Include="HistoryForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="LoginForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="node_blf.h" />
+    <ClInclude Include="openbsd.h" />
     <ClInclude Include="PasswordForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="PaymentUC.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="PersonDetailsConstraints.h" />
+    <ClInclude Include="RegisterForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="RemoveBill.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="StringConversion.h" />
     <ClInclude Include="User.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AccountUC.resx">
+      <DependentUpon>AccountUC.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillsUC.resx">
+      <DependentUpon>BillsUC.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateBill.resx">
+      <DependentUpon>CreateBill.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryForm.resx">
+      <DependentUpon>HistoryForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.h</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +200,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PasswordForm.resx">
       <DependentUpon>PasswordForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentUC.resx">
+      <DependentUpon>PaymentUC.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterForm.resx">
+      <DependentUpon>RegisterForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveBill.resx">
+      <DependentUpon>RemoveBill.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

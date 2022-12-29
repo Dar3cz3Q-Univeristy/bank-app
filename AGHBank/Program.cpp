@@ -1,6 +1,7 @@
 #include "MainForm.h"
 #include "LoginForm.h"
 #include "PasswordForm.h"
+#include "RegisterForm.h"
 #include "User.h"
 
 using namespace System;
@@ -10,28 +11,45 @@ int main(array <String^>^ args) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	AGHBank::MainForm MainForm;
-	AGHBank::LoginForm LoginForm;
+	User^ person = nullptr;
 
-	LoginForm.ShowDialog();
+	while (true) {
+		AGHBank::LoginForm LoginForm;
+		LoginForm.ShowDialog();
 
-	User^ user = LoginForm.user;
+		if (LoginForm.switchToRegister) {
+			AGHBank::RegisterForm RegisterForm;
+			RegisterForm.ShowDialog();
+			if (RegisterForm.switchToLogin) {
+				continue;
+			}
+			else {
+				break;
+			}
+		}
+		else {
+			person = LoginForm.person;
+			if (person == nullptr) {
+				return 0;
+			}
+			else {
+				AGHBank::PasswordForm PasswordForm(person->name);
+				PasswordForm.ShowDialog();
 
-	if (user == nullptr) {
-		MessageBox::Show("U¿ytkownik nie zosta³ autoryzowany. Zamykanie programu.", "B³¹d autoryzacji", MessageBoxButtons::OK);
-		return 0;
+				if (PasswordForm.switchToLogin) {
+					continue;
+				}
+				else {
+					person->auth = PasswordForm.auth;
+					break;
+				}
+			}
+		}
 	}
 
-	AGHBank::PasswordForm PasswordForm(user->name);
-	PasswordForm.ShowDialog();
-
-	user->auth = PasswordForm.auth;
-
-	if (user->auth) {
+	if (person != nullptr && person->auth) {
+		AGHBank::MainForm MainForm(person->id);
 		MainForm.ShowDialog();
-	}
-	else {
-		MessageBox::Show("U¿ytkownik nie zosta³ autoryzowany. Zamykanie programu.", "B³¹d autoryzacji", MessageBoxButtons::OK);
 	}
 
 	return 0;
