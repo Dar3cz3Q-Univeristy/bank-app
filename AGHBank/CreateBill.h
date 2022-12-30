@@ -43,6 +43,7 @@ namespace AGHBank {
 	private: System::Windows::Forms::ComboBox^ accountTypeCombo;
 	private: System::Windows::Forms::ComboBox^ currencyCombo;
 	private: System::Windows::Forms::Button^ createBillBtn;
+	private: System::Windows::Forms::Label^ errorLb;
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -62,6 +63,7 @@ namespace AGHBank {
 			this->currencyLb = (gcnew System::Windows::Forms::Label());
 			this->accountTypeCombo = (gcnew System::Windows::Forms::ComboBox());
 			this->createBillBtn = (gcnew System::Windows::Forms::Button());
+			this->errorLb = (gcnew System::Windows::Forms::Label());
 			this->newBillSettingsTableLayoutPanel->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -155,11 +157,23 @@ namespace AGHBank {
 			this->createBillBtn->UseVisualStyleBackColor = false;
 			this->createBillBtn->Click += gcnew System::EventHandler(this, &CreateBill::createBillBtn_Click);
 			// 
+			// errorLb
+			// 
+			this->errorLb->Font = (gcnew System::Drawing::Font(L"Impact", 16));
+			this->errorLb->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(193)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
+				static_cast<System::Int32>(static_cast<System::Byte>(20)));
+			this->errorLb->Location = System::Drawing::Point(15, 399);
+			this->errorLb->Name = L"errorLb";
+			this->errorLb->Size = System::Drawing::Size(851, 96);
+			this->errorLb->TabIndex = 7;
+			this->errorLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
 			// CreateBill
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(878, 594);
+			this->Controls->Add(this->errorLb);
 			this->Controls->Add(this->createBillBtn);
 			this->Controls->Add(this->newBillSettingsTableLayoutPanel);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;

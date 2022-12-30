@@ -146,6 +146,7 @@ System::Void RegisterForm::nextBtn_Click(System::Object^ sender, System::EventAr
 		sqlConn.Close();
 
 		MessageBox::Show("Konto zosta³o utworzone pomyœlnie", "Informacja", MessageBoxButtons::OK);
+
 		this->switchToLogin = true;
 		this->Close();
 	}

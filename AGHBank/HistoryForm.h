@@ -8,6 +8,7 @@ namespace AGHBank {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Data::SqlClient;
 
 	/// <summary>
 	/// Summary for HistoryForm
@@ -42,6 +43,11 @@ namespace AGHBank {
 	private: System::Windows::Forms::Panel^ HistoryListPanel;
 	private: System::Windows::Forms::Label^ expensesLb;
 	private: System::Windows::Forms::TableLayoutPanel^ historyListTableLayoutPanel;
+	private: System::Windows::Forms::Label^ typeLb;
+	private: System::Windows::Forms::Label^ dateLb;
+	private: System::Windows::Forms::Label^ amountLb;
+	private: System::Windows::Forms::Label^ titleLb;
+	private: System::Windows::Forms::Label^ contractorLb;
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -61,8 +67,14 @@ namespace AGHBank {
 			this->historyHeaderLb = (gcnew System::Windows::Forms::Label());
 			this->HistoryListPanel = (gcnew System::Windows::Forms::Panel());
 			this->historyListTableLayoutPanel = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->typeLb = (gcnew System::Windows::Forms::Label());
+			this->dateLb = (gcnew System::Windows::Forms::Label());
+			this->amountLb = (gcnew System::Windows::Forms::Label());
+			this->titleLb = (gcnew System::Windows::Forms::Label());
+			this->contractorLb = (gcnew System::Windows::Forms::Label());
 			this->headerPanel->SuspendLayout();
 			this->HistoryListPanel->SuspendLayout();
+			this->historyListTableLayoutPanel->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// headerPanel
@@ -126,21 +138,97 @@ namespace AGHBank {
 			// historyListTableLayoutPanel
 			// 
 			this->historyListTableLayoutPanel->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->historyListTableLayoutPanel->ColumnCount = 2;
+			this->historyListTableLayoutPanel->ColumnCount = 5;
 			this->historyListTableLayoutPanel->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				50)));
+				26.13974F)));
 			this->historyListTableLayoutPanel->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				50)));
+				27.58103F)));
+			this->historyListTableLayoutPanel->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				16.83687F)));
+			this->historyListTableLayoutPanel->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				17.66542F)));
+			this->historyListTableLayoutPanel->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				11.77695F)));
+			this->historyListTableLayoutPanel->Controls->Add(this->typeLb, 2, 0);
+			this->historyListTableLayoutPanel->Controls->Add(this->dateLb, 4, 0);
+			this->historyListTableLayoutPanel->Controls->Add(this->amountLb, 3, 0);
+			this->historyListTableLayoutPanel->Controls->Add(this->titleLb, 1, 0);
+			this->historyListTableLayoutPanel->Controls->Add(this->contractorLb, 0, 0);
 			this->historyListTableLayoutPanel->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->historyListTableLayoutPanel->Location = System::Drawing::Point(0, 0);
 			this->historyListTableLayoutPanel->Name = L"historyListTableLayoutPanel";
 			this->historyListTableLayoutPanel->RowCount = 2;
-			this->historyListTableLayoutPanel->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent,
+			this->historyListTableLayoutPanel->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
 				50)));
-			this->historyListTableLayoutPanel->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent,
-				50)));
+			this->historyListTableLayoutPanel->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
+				70)));
 			this->historyListTableLayoutPanel->Size = System::Drawing::Size(1528, 751);
 			this->historyListTableLayoutPanel->TabIndex = 0;
+			// 
+			// typeLb
+			// 
+			this->typeLb->AutoSize = true;
+			this->typeLb->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->typeLb->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 14, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(238)));
+			this->typeLb->Location = System::Drawing::Point(823, 0);
+			this->typeLb->Name = L"typeLb";
+			this->typeLb->Size = System::Drawing::Size(251, 50);
+			this->typeLb->TabIndex = 5;
+			this->typeLb->Text = L"Typ";
+			this->typeLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// dateLb
+			// 
+			this->dateLb->AutoSize = true;
+			this->dateLb->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->dateLb->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 14, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(238)));
+			this->dateLb->Location = System::Drawing::Point(1349, 0);
+			this->dateLb->Name = L"dateLb";
+			this->dateLb->Size = System::Drawing::Size(176, 50);
+			this->dateLb->TabIndex = 4;
+			this->dateLb->Text = L"Data";
+			this->dateLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// amountLb
+			// 
+			this->amountLb->AutoSize = true;
+			this->amountLb->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->amountLb->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 14, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(238)));
+			this->amountLb->Location = System::Drawing::Point(1080, 0);
+			this->amountLb->Name = L"amountLb";
+			this->amountLb->Size = System::Drawing::Size(263, 50);
+			this->amountLb->TabIndex = 3;
+			this->amountLb->Text = L"Kwota";
+			this->amountLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// titleLb
+			// 
+			this->titleLb->AutoSize = true;
+			this->titleLb->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->titleLb->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 14, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(238)));
+			this->titleLb->Location = System::Drawing::Point(402, 0);
+			this->titleLb->Name = L"titleLb";
+			this->titleLb->Size = System::Drawing::Size(415, 50);
+			this->titleLb->TabIndex = 1;
+			this->titleLb->Text = L"Tytu³";
+			this->titleLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// contractorLb
+			// 
+			this->contractorLb->AutoSize = true;
+			this->contractorLb->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->contractorLb->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 14, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(238)));
+			this->contractorLb->Location = System::Drawing::Point(3, 0);
+			this->contractorLb->Name = L"contractorLb";
+			this->contractorLb->Size = System::Drawing::Size(393, 50);
+			this->contractorLb->TabIndex = 0;
+			this->contractorLb->Text = L"Kontrahent";
+			this->contractorLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// HistoryForm
 			// 
@@ -156,6 +244,8 @@ namespace AGHBank {
 			this->Load += gcnew System::EventHandler(this, &HistoryForm::HistoryForm_Load);
 			this->headerPanel->ResumeLayout(false);
 			this->HistoryListPanel->ResumeLayout(false);
+			this->historyListTableLayoutPanel->ResumeLayout(false);
+			this->historyListTableLayoutPanel->PerformLayout();
 			this->ResumeLayout(false);
 
 		}

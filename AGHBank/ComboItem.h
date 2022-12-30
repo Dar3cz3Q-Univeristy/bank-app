@@ -6,15 +6,20 @@ public ref class ComboItem {
 protected:
 	String^ description;
 	int tag;
+	int additionalValue;
 
-public: ComboItem(String^ name, int value) {
-	description = name;
-	tag = value;
+public: ComboItem(String^ nameOfField, int hiddenValue, int hiddenSecondValue) {
+	description = nameOfField;
+	tag = hiddenValue;
+	additionalValue = hiddenSecondValue;
 }
 public: String^ ToString() override {
 	return description;
 }
 public: int GetTagValue() {
 	return tag;
+}
+public: int GetAdditionalValue() {
+	return additionalValue;
 }
 };

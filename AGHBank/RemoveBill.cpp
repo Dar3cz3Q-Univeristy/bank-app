@@ -21,7 +21,7 @@ System::Void RemoveBill::RemoveBill_Load(System::Object^ sender, System::EventAr
 			String^ accountName = reader->GetString(0);
 			int accountID = reader->GetInt32(1);
 			String^ lastDigits = reader->GetString(2);
-			this->accountListCombo->Items->Add(gcnew ComboItem(accountName + " - **** " + lastDigits, accountID));
+			this->accountListCombo->Items->Add(gcnew ComboItem(accountName + " - **** " + lastDigits, accountID, 0));
 		}
 	}
 	catch (SqlException^ e) {
@@ -30,13 +30,14 @@ System::Void RemoveBill::RemoveBill_Load(System::Object^ sender, System::EventAr
 }
 
 System::Void RemoveBill::removeBillBtn_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->errorLb->Text = "";
 	int selectedItemID = this->accountListCombo->SelectedIndex;
 	if (selectedItemID < 0) {
-		MessageBox::Show("Nie wybrano rachunku", "Informacja", MessageBoxButtons::OK);
+		this->errorLb->Text = "Nie wybrano rachunku!";
 		return;
 	}
 	ComboItem^ item = safe_cast<ComboItem^>(this->accountListCombo->Items[selectedItemID]);
-	int selectedAccountID = item->GetTagValue();
+	int selectedComboID = item->GetTagValue();
 	try {
 		SqlConnection sqlConn(ConvertString::toSystemString(DatabaseConfig::sqlConnectionString));
 		sqlConn.Open();
@@ -44,7 +45,7 @@ System::Void RemoveBill::removeBillBtn_Click(System::Object^ sender, System::Eve
 		String^ sqlQuery = "UPDATE BankAccounts SET Active = 0 WHERE AccountID = @AccountID";
 
 		SqlCommand command(sqlQuery, % sqlConn);
-		command.Parameters->AddWithValue("@AccountID", selectedAccountID);
+		command.Parameters->AddWithValue("@AccountID", selectedComboID);
 
 		command.ExecuteNonQuery();
 		sqlConn.Close();

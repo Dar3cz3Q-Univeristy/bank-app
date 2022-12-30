@@ -152,10 +152,10 @@ namespace AGHBank {
 				static_cast<System::Byte>(238)));
 			this->passwordInput->Location = System::Drawing::Point(19, 221);
 			this->passwordInput->Name = L"passwordInput";
-			this->passwordInput->PasswordChar = '*';
 			this->passwordInput->Size = System::Drawing::Size(747, 44);
 			this->passwordInput->TabIndex = 1;
 			this->passwordInput->Text = L"zaq1@WSX";
+			this->passwordInput->UseSystemPasswordChar = true;
 			// 
 			// greetingLb
 			// 

@@ -65,10 +65,11 @@ System::Void CreateBill::AccountTypeCombo_SelectedIndexChanged(System::Object^ s
 }
 
 System::Void CreateBill::createBillBtn_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->errorLb->Text = "";
 	int accountType = this->accountTypeCombo->SelectedIndex;
 	int currencyType = this->currencyCombo->SelectedIndex;
 	if (accountType < 0 || currencyType < 0) {
-		MessageBox::Show("Nie wybrano typu konta lub waluty", "Informacja", MessageBoxButtons::OK);
+		this->errorLb->Text = "Nie wybrano typu konta lub waluty";
 		return;
 	}
 	accountType++;

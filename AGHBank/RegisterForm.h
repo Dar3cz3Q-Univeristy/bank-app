@@ -380,6 +380,7 @@ namespace AGHBank {
             this->cardIDInput->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
+            this->cardIDInput->CharacterCasing = System::Windows::Forms::CharacterCasing::Upper;
             this->cardIDInput->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(238)));
             this->cardIDInput->Location = System::Drawing::Point(364, 205);
@@ -493,10 +494,10 @@ namespace AGHBank {
             this->retypedPasswordInput->MaxLength = 16;
             this->retypedPasswordInput->MinimumSize = System::Drawing::Size(4, 35);
             this->retypedPasswordInput->Name = L"retypedPasswordInput";
-            this->retypedPasswordInput->PasswordChar = '*';
             this->retypedPasswordInput->Size = System::Drawing::Size(413, 39);
             this->retypedPasswordInput->TabIndex = 10;
             this->retypedPasswordInput->Text = L"zaq1@WSX";
+            this->retypedPasswordInput->UseSystemPasswordChar = true;
             // 
             // passwordInput
             // 
@@ -510,10 +511,10 @@ namespace AGHBank {
             this->passwordInput->MaxLength = 16;
             this->passwordInput->MinimumSize = System::Drawing::Size(4, 35);
             this->passwordInput->Name = L"passwordInput";
-            this->passwordInput->PasswordChar = '*';
             this->passwordInput->Size = System::Drawing::Size(413, 39);
             this->passwordInput->TabIndex = 9;
             this->passwordInput->Text = L"zaq1@WSX";
+            this->passwordInput->UseSystemPasswordChar = true;
             // 
             // emailInput
             // 

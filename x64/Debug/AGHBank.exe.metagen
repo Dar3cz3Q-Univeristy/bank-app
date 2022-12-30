@@ -72,6 +72,8 @@ Class AGHBank.PaymentUC: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     Int32 loggedUserID : Public
+    Int32 selectedComboID : Public
+    Int32 selectedAccountID : Public
 Class AGHBank.PasswordForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -79,13 +81,14 @@ Class AGHBank.PasswordForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldIni
     System.String loggingUsername : Public
     Boolean auth : Public
     Boolean switchToLogin : Public
+Class ComboItem: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetTagValue(): PrivateScope, Public, HideBySig
+    GetAdditionalValue(): PrivateScope, Public, HideBySig
 Class AGHBank.RegisterForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     Boolean switchToLogin : Public
-Class ComboItem: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-    Void .ctor(System.String, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-  Methods:
-    ToString(): PrivateScope, Public, Virtual, HideBySig
-    GetTagValue(): PrivateScope, Public, HideBySig
