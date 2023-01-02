@@ -93,8 +93,9 @@ namespace AGHBank {
 			// expensesLb
 			// 
 			this->expensesLb->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->expensesLb->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->expensesLb->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->expensesLb->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->expensesLb->Location = System::Drawing::Point(1004, 0);
 			this->expensesLb->Name = L"expensesLb";
 			this->expensesLb->Size = System::Drawing::Size(498, 93);
@@ -106,7 +107,7 @@ namespace AGHBank {
 			// 
 			this->incomeLb->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				| System::Windows::Forms::AnchorStyles::Right));
-			this->incomeLb->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->incomeLb->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->incomeLb->Location = System::Drawing::Point(392, 0);
 			this->incomeLb->Name = L"incomeLb";
@@ -140,15 +141,15 @@ namespace AGHBank {
 			this->historyListTableLayoutPanel->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->historyListTableLayoutPanel->ColumnCount = 5;
 			this->historyListTableLayoutPanel->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				26.13974F)));
+				27.55236F)));
 			this->historyListTableLayoutPanel->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				27.58103F)));
+				25.589F)));
 			this->historyListTableLayoutPanel->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				16.83687F)));
+				18.58639F)));
 			this->historyListTableLayoutPanel->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				17.66542F)));
+				14.13613F)));
 			this->historyListTableLayoutPanel->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				11.77695F)));
+				14.07068F)));
 			this->historyListTableLayoutPanel->Controls->Add(this->typeLb, 2, 0);
 			this->historyListTableLayoutPanel->Controls->Add(this->dateLb, 4, 0);
 			this->historyListTableLayoutPanel->Controls->Add(this->amountLb, 3, 0);
@@ -171,9 +172,9 @@ namespace AGHBank {
 			this->typeLb->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->typeLb->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 14, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(238)));
-			this->typeLb->Location = System::Drawing::Point(823, 0);
+			this->typeLb->Location = System::Drawing::Point(815, 0);
 			this->typeLb->Name = L"typeLb";
-			this->typeLb->Size = System::Drawing::Size(251, 50);
+			this->typeLb->Size = System::Drawing::Size(278, 50);
 			this->typeLb->TabIndex = 5;
 			this->typeLb->Text = L"Typ";
 			this->typeLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -184,9 +185,9 @@ namespace AGHBank {
 			this->dateLb->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->dateLb->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 14, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(238)));
-			this->dateLb->Location = System::Drawing::Point(1349, 0);
+			this->dateLb->Location = System::Drawing::Point(1315, 0);
 			this->dateLb->Name = L"dateLb";
-			this->dateLb->Size = System::Drawing::Size(176, 50);
+			this->dateLb->Size = System::Drawing::Size(210, 50);
 			this->dateLb->TabIndex = 4;
 			this->dateLb->Text = L"Data";
 			this->dateLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -197,9 +198,9 @@ namespace AGHBank {
 			this->amountLb->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->amountLb->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 14, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(238)));
-			this->amountLb->Location = System::Drawing::Point(1080, 0);
+			this->amountLb->Location = System::Drawing::Point(1099, 0);
 			this->amountLb->Name = L"amountLb";
-			this->amountLb->Size = System::Drawing::Size(263, 50);
+			this->amountLb->Size = System::Drawing::Size(210, 50);
 			this->amountLb->TabIndex = 3;
 			this->amountLb->Text = L"Kwota";
 			this->amountLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -210,9 +211,9 @@ namespace AGHBank {
 			this->titleLb->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->titleLb->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 14, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(238)));
-			this->titleLb->Location = System::Drawing::Point(402, 0);
+			this->titleLb->Location = System::Drawing::Point(424, 0);
 			this->titleLb->Name = L"titleLb";
-			this->titleLb->Size = System::Drawing::Size(415, 50);
+			this->titleLb->Size = System::Drawing::Size(385, 50);
 			this->titleLb->TabIndex = 1;
 			this->titleLb->Text = L"Tytu³";
 			this->titleLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -225,7 +226,7 @@ namespace AGHBank {
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(238)));
 			this->contractorLb->Location = System::Drawing::Point(3, 0);
 			this->contractorLb->Name = L"contractorLb";
-			this->contractorLb->Size = System::Drawing::Size(393, 50);
+			this->contractorLb->Size = System::Drawing::Size(415, 50);
 			this->contractorLb->TabIndex = 0;
 			this->contractorLb->Text = L"Kontrahent";
 			this->contractorLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;

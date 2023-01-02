@@ -129,7 +129,9 @@
     <ClCompile Include="bcrypt.cpp" />
     <ClCompile Include="BillsUC.cpp" />
     <ClCompile Include="blowfish.cpp" />
+    <ClCompile Include="ContractorsUC.cpp" />
     <ClCompile Include="CreateBill.cpp" />
+    <ClCompile Include="CreateContractor.cpp" />
     <ClCompile Include="HistoryForm.cpp" />
     <ClCompile Include="LoginForm.cpp" />
     <ClCompile Include="MainForm.cpp" />
@@ -138,17 +140,26 @@
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="RegisterForm.cpp" />
     <ClCompile Include="RemoveBill.cpp" />
+    <ClCompile Include="SelectContractor.cpp" />
+    <ClCompile Include="TransferUC.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AccountUC.h">
       <FileType>CppControl</FileType>
     </ClInclude>
+    <ClInclude Include="ArrayCheck.h" />
     <ClInclude Include="bcrypt.h" />
     <ClInclude Include="BillsUC.h">
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="ComboItem.h" />
+    <ClInclude Include="ContractorsUC.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
     <ClInclude Include="CreateBill.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="CreateContractor.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Database.h" />
@@ -176,7 +187,13 @@
     <ClInclude Include="RemoveBill.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="SelectContractor.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="StringConversion.h" />
+    <ClInclude Include="TransferUC.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
     <ClInclude Include="User.h" />
   </ItemGroup>
   <ItemGroup>
@@ -186,8 +203,14 @@
     <EmbeddedResource Include="BillsUC.resx">
       <DependentUpon>BillsUC.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ContractorsUC.resx">
+      <DependentUpon>ContractorsUC.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateBill.resx">
       <DependentUpon>CreateBill.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateContractor.resx">
+      <DependentUpon>CreateContractor.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HistoryForm.resx">
       <DependentUpon>HistoryForm.h</DependentUpon>
@@ -209,6 +232,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RemoveBill.resx">
       <DependentUpon>RemoveBill.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectContractor.resx">
+      <DependentUpon>SelectContractor.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferUC.resx">
+      <DependentUpon>TransferUC.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -17,3 +17,7 @@ C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\Ba
 C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\BankApp\AGHBank\x64\Debug\AGHBank.HistoryForm.resources
 C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\BankApp\AGHBank\x64\Debug\AGHBank.RemoveBill.resources
 C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\BankApp\AGHBank\x64\Debug\AGHBank.PaymentUC.resources
+C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\BankApp\AGHBank\x64\Debug\AGHBank.TransferUC.resources
+C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\BankApp\AGHBank\x64\Debug\AGHBank.SelectContractor.resources
+C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\BankApp\AGHBank\x64\Debug\AGHBank.ContractorsUC.resources
+C:\Users\dariu\Documents\Programowanie\Podstawy Informatyki\Projekt\Aplikacja\BankApp\AGHBank\x64\Debug\AGHBank.CreateContractor.resources

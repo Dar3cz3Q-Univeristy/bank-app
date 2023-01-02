@@ -6,10 +6,12 @@
 using namespace AGHBank;
 
 System::Void LoginForm::nextBtn_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->nextBtn->Enabled = false;
 	String^ username = this->loginInput->Text;
 	this->loginErrorLb->Text = "";
 	if (username->Length == 0) {
 		this->loginErrorLb->Text = "Nie wpisano nazwy u¿ytkownika!";
+		this->nextBtn->Enabled = true;
 		return;
 	}
 	try {
@@ -31,12 +33,14 @@ System::Void LoginForm::nextBtn_Click(System::Object^ sender, System::EventArgs^
 		}
 		else {
 			person = nullptr;
+			this->nextBtn->Enabled = true;
 			this->loginErrorLb->Text = "Nie istnieje taki u¿ytkownik!";
 		}
 		reader->Close();
 		sqlConn.Close();
 	}
 	catch (SqlException^ e) {
+		this->nextBtn->Enabled = true;
 		if (e->Number == 53) {
 			this->loginErrorLb->Text = "Problem z baz¹ danych. Spróbuj ponownie za kilka minut.";
 			return;

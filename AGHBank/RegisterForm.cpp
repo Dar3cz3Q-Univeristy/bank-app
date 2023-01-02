@@ -22,6 +22,7 @@ System::Void RegisterForm::noAccountLink_LinkClicked(System::Object^ sender, Sys
 }
 
 System::Void RegisterForm::nextBtn_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->nextBtn->Enabled = false;
 	String^ username = this->usernameInput->Text;
 	String^ email = this->emailInput->Text;
 	String^ password = this->passwordInput->Text;
@@ -69,6 +70,7 @@ System::Void RegisterForm::nextBtn_Click(System::Object^ sender, System::EventAr
 
 	if (emptyFields) {
 		this->registerErrorLb->Text = "Uzupe³nij puste pola!";
+		this->nextBtn->Enabled = true;
 		return;
 	}
 
@@ -76,21 +78,25 @@ System::Void RegisterForm::nextBtn_Click(System::Object^ sender, System::EventAr
 
 	if (!PersonDetailsCheck::peselSum(ConvertString::toStandardString(pesel))) {
 		this->registerErrorLb->Text = "Pesel jest niepoprawny!";
+		this->nextBtn->Enabled = true;
 		return;
 	}
 
 	if (!PersonDetailsCheck::idCardSum(ConvertString::toStandardString(cardID))) {
 		this->registerErrorLb->Text = "Numer dowodu osobistego jest niepoprawny!";
+		this->nextBtn->Enabled = true;
 		return;
 	}
 
 	if (phoneNumber->Length != 9) {
 		this->registerErrorLb->Text = "Numer telefonu jest niepoprawny!";
+		this->nextBtn->Enabled = true;
 		return;
 	}
 
 	if (!PersonDetailsCheck::isAdult(birthDate)) {
 		this->registerErrorLb->Text = "Osoba musi byæ pe³noletnia!";
+		this->nextBtn->Enabled = true;
 		return;
 	}
 
@@ -102,6 +108,7 @@ System::Void RegisterForm::nextBtn_Click(System::Object^ sender, System::EventAr
 
 	if (!isEmailValid) {
 		this->registerErrorLb->Text = "E-Mail jest niepoprawny!";
+		this->nextBtn->Enabled = true;
 		return;
 	}
 
@@ -113,11 +120,13 @@ System::Void RegisterForm::nextBtn_Click(System::Object^ sender, System::EventAr
 
 	if (!isPasswordValid) {
 		this->registerErrorLb->Text = "Has³o musi posiadaæ od 4 do 16 znaków, du¿¹ literê, ma³¹ literê, liczbê, znak specjalny!";
+		this->nextBtn->Enabled = true;
 		return;
 	}
 
 	if (password != retypedPassword) {
 		this->registerErrorLb->Text = "Has³a nie s¹ takie same!";
+		this->nextBtn->Enabled = true;
 		return;
 	}
 
@@ -151,6 +160,7 @@ System::Void RegisterForm::nextBtn_Click(System::Object^ sender, System::EventAr
 		this->Close();
 	}
 	catch (SqlException^ e) {
+		this->nextBtn->Enabled = true;
 		if (e->Number == 53) {
 			this->registerErrorLb->Text = "Problem z baz¹ danych. Spróbuj ponownie za kilka minut.";
 			return;

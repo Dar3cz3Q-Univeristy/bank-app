@@ -21,7 +21,7 @@ System::Void RemoveBill::RemoveBill_Load(System::Object^ sender, System::EventAr
 			String^ accountName = reader->GetString(0);
 			int accountID = reader->GetInt32(1);
 			String^ lastDigits = reader->GetString(2);
-			this->accountListCombo->Items->Add(gcnew ComboItem(accountName + " - **** " + lastDigits, accountID, 0));
+			this->accountListCombo->Items->Add(gcnew ComboItem(accountName + " - **** " + lastDigits, accountID, 0, ""));
 		}
 	}
 	catch (SqlException^ e) {
@@ -31,9 +31,11 @@ System::Void RemoveBill::RemoveBill_Load(System::Object^ sender, System::EventAr
 
 System::Void RemoveBill::removeBillBtn_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->errorLb->Text = "";
+	this->removeBillBtn->Enabled = false;
 	int selectedItemID = this->accountListCombo->SelectedIndex;
 	if (selectedItemID < 0) {
 		this->errorLb->Text = "Nie wybrano rachunku!";
+		this->removeBillBtn->Enabled = true;
 		return;
 	}
 	ComboItem^ item = safe_cast<ComboItem^>(this->accountListCombo->Items[selectedItemID]);
@@ -51,9 +53,11 @@ System::Void RemoveBill::removeBillBtn_Click(System::Object^ sender, System::Eve
 		sqlConn.Close();
 
 		MessageBox::Show("Rachunek zosta³ zamkniêty", "Informacja", MessageBoxButtons::OK);
+
 		this->Close();
 	}
 	catch (SqlException^ e) {
+		this->removeBillBtn->Enabled = true;
 		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
 	}
 }

@@ -10,9 +10,11 @@ System::Void PasswordForm::PasswordForm_Load(System::Object^ sender, System::Eve
 }
 
 System::Void PasswordForm::nextBtn_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->nextBtn->Enabled = false;
 	String^ password = this->passwordInput->Text;
 	if (password->Length == 0) {
 		this->passwordErrorLb->Text = "Nie wpisano has³a!";
+		this->nextBtn->Enabled = true;
 		return;
 	}
 	try {
@@ -34,6 +36,7 @@ System::Void PasswordForm::nextBtn_Click(System::Object^ sender, System::EventAr
 			}
 			else {
 				auth = false;
+				this->nextBtn->Enabled = true;
 				this->restorePasswordLink->Text = "Odzyskaj has³o";
 				this->passwordErrorLb->Text = "B³êdne has³o!";
 			}
@@ -43,6 +46,7 @@ System::Void PasswordForm::nextBtn_Click(System::Object^ sender, System::EventAr
 		sqlConn.Close();
 	}
 	catch (SqlException^ e) {
+		this->nextBtn->Enabled = true;
 		if (e->Number == 53) {
 			this->passwordErrorLb->Text = "Problem z baz¹ danych. Spróbuj ponownie za kilka minut.";
 			return;

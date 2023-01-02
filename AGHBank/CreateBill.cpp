@@ -65,11 +65,13 @@ System::Void CreateBill::AccountTypeCombo_SelectedIndexChanged(System::Object^ s
 }
 
 System::Void CreateBill::createBillBtn_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->createBillBtn->Enabled = false;
 	this->errorLb->Text = "";
 	int accountType = this->accountTypeCombo->SelectedIndex;
 	int currencyType = this->currencyCombo->SelectedIndex;
 	if (accountType < 0 || currencyType < 0) {
 		this->errorLb->Text = "Nie wybrano typu konta lub waluty";
+		this->createBillBtn->Enabled = true;
 		return;
 	}
 	accountType++;
@@ -90,10 +92,10 @@ System::Void CreateBill::createBillBtn_Click(System::Object^ sender, System::Eve
 
 		MessageBox::Show("Rachunek zosta³ utworzony pomyœlnie", "Informacja", MessageBoxButtons::OK);
 
-		sqlConn.Close();
+		this->Close();
 	}
 	catch (SqlException^ e) {
+		this->createBillBtn->Enabled = true;
 		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
 	}
-	this->Close();
 }

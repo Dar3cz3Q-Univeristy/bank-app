@@ -5,6 +5,8 @@
 #include "AccountUC.h"
 #include "BillsUC.h"
 #include "PaymentUC.h"
+#include "TransferUC.h"
+#include "ContractorsUC.h"
 
 using namespace AGHBank;
 
@@ -29,7 +31,7 @@ void MainForm::downloadBasicData(void) {
 
 		if (reader->Read()) {
 			String^ nameToShow = reader->GetString(0) + " " + reader->GetString(1);
-			this->UserNameLb->Text = nameToShow;
+			this->userNameLb->Text = nameToShow;
 		}
 
 		reader->Close();
@@ -41,12 +43,12 @@ void MainForm::downloadBasicData(void) {
 }
 
 void MainForm::resetColorsBtns(void) {
-	this->AccountBtn->ForeColor = Color::FromArgb(1, 0, 0, 0);
-	this->BillBtn->ForeColor = Color::FromArgb(1, 0, 0, 0);
-	this->CardsBtn->ForeColor = Color::FromArgb(1, 0, 0, 0);
-	this->ContractorsBtn->ForeColor = Color::FromArgb(1, 0, 0, 0);
-	this->TransferBtn->ForeColor = Color::FromArgb(1, 0, 0, 0);
-	this->PaymentBtn->ForeColor = Color::FromArgb(1, 0, 0, 0);
+	this->accountBtn->ForeColor = Color::FromArgb(1, 0, 0, 0);
+	this->billBtn->ForeColor = Color::FromArgb(1, 0, 0, 0);
+	this->cardsBtn->ForeColor = Color::FromArgb(1, 0, 0, 0);
+	this->contractorsBtn->ForeColor = Color::FromArgb(1, 0, 0, 0);
+	this->transferBtn->ForeColor = Color::FromArgb(1, 0, 0, 0);
+	this->paymentBtn->ForeColor = Color::FromArgb(1, 0, 0, 0);
 }
 
 System::Void MainForm::MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
@@ -55,23 +57,37 @@ System::Void MainForm::MainForm_Load(System::Object^ sender, System::EventArgs^ 
 	addUserControl(userControl);
 }
 
-System::Void MainForm::AccountBtn_Click(System::Object^ sender, System::EventArgs^ e) {
+System::Void MainForm::accountBtn_Click(System::Object^ sender, System::EventArgs^ e) {
 	AccountUC^ userControl = gcnew AccountUC(loggedUserID);
 	addUserControl(userControl);
 	resetColorsBtns();
-	this->AccountBtn->ForeColor = Color::FromArgb(1, 193, 13, 20);
+	this->accountBtn->ForeColor = Color::FromArgb(1, 193, 13, 20);
 }
 
-System::Void MainForm::BillBtn_Click(System::Object^ sender, System::EventArgs^ e) {
+System::Void MainForm::contractorsBtn_Click(System::Object^ sender, System::EventArgs^ e) {
+	ContractorsUC^ userControl = gcnew ContractorsUC(loggedUserID);
+	addUserControl(userControl);
+	resetColorsBtns();
+	this->contractorsBtn->ForeColor = Color::FromArgb(1, 193, 13, 20);
+}
+
+System::Void MainForm::billBtn_Click(System::Object^ sender, System::EventArgs^ e) {
 	BillsUC^ userControl = gcnew BillsUC(loggedUserID);
 	addUserControl(userControl);
 	resetColorsBtns();
-	this->BillBtn->ForeColor = Color::FromArgb(1, 193, 13, 20);
+	this->billBtn->ForeColor = Color::FromArgb(1, 193, 13, 20);
 }
 
-System::Void MainForm::PaymentBtn_Click(System::Object^ sender, System::EventArgs^ e) {
+System::Void MainForm::paymentBtn_Click(System::Object^ sender, System::EventArgs^ e) {
 	PaymentUC^ userControl = gcnew PaymentUC(loggedUserID);
 	addUserControl(userControl);
 	resetColorsBtns();
-	this->PaymentBtn->ForeColor = Color::FromArgb(1, 193, 13, 20);
+	this->paymentBtn->ForeColor = Color::FromArgb(1, 193, 13, 20);
+}
+
+System::Void MainForm::transferBtn_Click(System::Object^ sender, System::EventArgs^ e) {
+	TransferUC^ userControl = gcnew TransferUC(loggedUserID);
+	addUserControl(userControl);
+	resetColorsBtns();
+	this->transferBtn->ForeColor = Color::FromArgb(1, 193, 13, 20);
 }

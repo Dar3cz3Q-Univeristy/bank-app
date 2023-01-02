@@ -72,6 +72,18 @@
     <ClCompile Include="PaymentUC.cpp">
       <Filter>UserControls</Filter>
     </ClCompile>
+    <ClCompile Include="TransferUC.cpp">
+      <Filter>UserControls</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectContractor.cpp">
+      <Filter>Nested Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="ContractorsUC.cpp">
+      <Filter>UserControls</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateContractor.cpp">
+      <Filter>Nested Forms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainForm.h">
@@ -127,6 +139,21 @@
     </ClInclude>
     <ClInclude Include="PaymentUC.h">
       <Filter>UserControls</Filter>
+    </ClInclude>
+    <ClInclude Include="TransferUC.h">
+      <Filter>UserControls</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectContractor.h">
+      <Filter>Nested Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="ContractorsUC.h">
+      <Filter>UserControls</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateContractor.h">
+      <Filter>Nested Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayCheck.h">
+      <Filter>Functions</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

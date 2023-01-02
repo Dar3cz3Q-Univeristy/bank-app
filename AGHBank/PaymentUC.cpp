@@ -22,7 +22,7 @@ System::Void PaymentUC::PaymentUC_Load(System::Object^ sender, System::EventArgs
 			int accountID = reader->GetInt32(1);
 			String^ lastDigits = reader->GetString(2);
 			int accountCurrencyID = reader->GetInt32(3);
-			this->billsComboBox->Items->Add(gcnew ComboItem(accountName + " - **** " + lastDigits, accountID, accountCurrencyID));
+			this->billsComboBox->Items->Add(gcnew ComboItem(accountName + " - **** " + lastDigits, accountID, accountCurrencyID, ""));
 		}
 
 		reader->Close();
@@ -67,11 +67,13 @@ System::Void PaymentUC::billsComboBox_SelectedIndexChanged(System::Object^ sende
 }
 
 System::Void PaymentUC::nextBtn_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->nextBtn->Enabled = false;
 	this->errorLb->Text = "";
 	int selectedCurrencyID = this->currencyComboBox->SelectedIndex;
 	String^ amount = this->amountInput->Text;
 	if (selectedComboID < 0 || selectedCurrencyID < 0 || amount->Length == 0) {
 		this->errorLb->Text = "Proszê uzupe³niæ puste pola!";
+		this->nextBtn->Enabled = true;
 		return;
 	}
 	int transactionType = this->paymentRadioBtn->Checked ? 1 : 2;
@@ -96,6 +98,7 @@ System::Void PaymentUC::nextBtn_Click(System::Object^ sender, System::EventArgs^
 		MessageBox::Show("Pieni¹dze zosta³y " + infoType + " pomyœlnie", "Informacja", MessageBoxButtons::OK);
 	}
 	catch (SqlException^ e) {
+		this->nextBtn->Enabled = true;
 		if (e->Number == 547) {
 			this->errorLb->Text = "Niewystarczaj¹ca iloœæ œrodków!";
 			return;
