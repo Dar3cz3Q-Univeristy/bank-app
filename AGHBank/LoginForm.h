@@ -170,7 +170,6 @@ namespace AGHBank {
 			this->loginInput->Name = L"loginInput";
 			this->loginInput->Size = System::Drawing::Size(747, 44);
 			this->loginInput->TabIndex = 1;
-			this->loginInput->Text = L"Dar3cz3Q";
 			// 
 			// noAccountLink
 			// 
@@ -222,6 +221,7 @@ namespace AGHBank {
 			this->panel2->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
+
 		}
 #pragma endregion
 	public:

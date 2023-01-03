@@ -154,7 +154,6 @@ namespace AGHBank {
 			this->passwordInput->Name = L"passwordInput";
 			this->passwordInput->Size = System::Drawing::Size(747, 44);
 			this->passwordInput->TabIndex = 1;
-			this->passwordInput->Text = L"zaq1@WSX";
 			this->passwordInput->UseSystemPasswordChar = true;
 			// 
 			// greetingLb

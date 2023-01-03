@@ -98,7 +98,7 @@ namespace PersonDetailsCheck {
 		}
 
 		int birthDay = birthDate.Day;
-		int todayDay = today->tm_mday;
+		int todayDay = today->tm_mday - 1;
 
 		if (todayDay - birthDay >= 0) {
 			return true;

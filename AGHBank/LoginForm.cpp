@@ -1,7 +1,8 @@
 #include "LoginForm.h"
-#include "User.h"
+
 #include "Database.h"
 #include "StringConversion.h"
+#include "User.h"
 
 using namespace AGHBank;
 
@@ -18,7 +19,8 @@ System::Void LoginForm::nextBtn_Click(System::Object^ sender, System::EventArgs^
 		SqlConnection sqlConn(ConvertString::toSystemString(DatabaseConfig::sqlConnectionString));
 		sqlConn.Open();
 
-		String^ sqlQuery = "SELECT PersonID, Username FROM PersonLogins WHERE Username = @Username;";
+		String^ sqlQuery = "SELECT PersonID, Username FROM PersonLogins WHERE Username = "
+			"@Username AND Active = 1;";
 
 		SqlCommand command(sqlQuery, % sqlConn);
 		command.Parameters->AddWithValue("@Username", username);

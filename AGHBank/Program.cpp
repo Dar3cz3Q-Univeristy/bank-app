@@ -1,5 +1,5 @@
-#include "MainForm.h"
 #include "LoginForm.h"
+#include "MainForm.h"
 #include "PasswordForm.h"
 #include "RegisterForm.h"
 #include "User.h"
@@ -7,7 +7,7 @@
 using namespace System;
 using namespace System::Windows::Forms;
 
-int main(array <String^>^ args) {
+int main(array<String^>^ args) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
@@ -48,7 +48,7 @@ int main(array <String^>^ args) {
 	}
 
 	if (person != nullptr && person->auth) {
-		AGHBank::MainForm MainForm(person->id);
+		AGHBank::MainForm MainForm(person->id, person->name);
 		MainForm.ShowDialog();
 	}
 

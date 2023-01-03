@@ -1,5 +1,6 @@
   AGHBank.AccountUC.resources - Embedded, ContainedInManifestFile, 
   AGHBank.BillsUC.resources - Embedded, ContainedInManifestFile, 
+  AGHBank.ChangePassword.resources - Embedded, ContainedInManifestFile, 
   AGHBank.ContractorsUC.resources - Embedded, ContainedInManifestFile, 
   AGHBank.CreateBill.resources - Embedded, ContainedInManifestFile, 
   AGHBank.CreateContractor.resources - Embedded, ContainedInManifestFile, 
@@ -11,6 +12,7 @@
   AGHBank.RegisterForm.resources - Embedded, ContainedInManifestFile, 
   AGHBank.RemoveBill.resources - Embedded, ContainedInManifestFile, 
   AGHBank.SelectContractor.resources - Embedded, ContainedInManifestFile, 
+  AGHBank.SettingsUC.resources - Embedded, ContainedInManifestFile, 
   AGHBank.TransferUC.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly AGHBank, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
@@ -32,6 +34,8 @@ Class AGHBank.AccountUC: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     Int32 loggedUserID : Public
+    Int32 randomAccountID : Public
+    System.String currencyShortcut : Public
 Class AGHBank.BillsUC: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.UserControl
     Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -52,6 +56,11 @@ Class AGHBank.RemoveBill: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     Int32 loggedUserID : Public
+Class AGHBank.ChangePassword: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 loggedUserID : Public
 Class AGHBank.ContractorsUC: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.UserControl
     Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -64,9 +73,10 @@ Class AGHBank.CreateContractor: AutoLayout, AnsiClass, Class, Public, BeforeFiel
     Int32 loggedUserID : Public
 Class AGHBank.MainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     Int32 loggedUserID : Public
+    System.String loggedUserName : Public
   Methods:
     resetColorsBtns(): PrivateScope, Public, HideBySig
 Class User: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
@@ -95,6 +105,11 @@ Class AGHBank.TransferUC: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Int32 loggedUserID : Public
     Int32 selectedType : Public
     Int32 startingAccountID : Public
+Class AGHBank.SettingsUC: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.UserControl
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 loggedUserID : Public
 Class AGHBank.PasswordForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

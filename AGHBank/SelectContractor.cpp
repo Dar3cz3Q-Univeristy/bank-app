@@ -18,7 +18,7 @@ System::Void SelectContractor::SelectContractor_Load(System::Object^ sender, Sys
 
 		int i = 0, initialHeight = 100;
 
-		if (!reader->Read()) {
+		if (!reader->HasRows) {
 			Label^ infoLabel = gcnew Label();
 			infoLabel->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 14, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
@@ -35,7 +35,7 @@ System::Void SelectContractor::SelectContractor_Load(System::Object^ sender, Sys
 
 			Button^ selectContractorBtn = gcnew Button();
 			selectContractorBtn->Cursor = System::Windows::Forms::Cursors::Hand;
-			selectContractorBtn->Font = (gcnew System::Drawing::Font(L"Franklin Gothic Medium Cond", 17, System::Drawing::FontStyle::Regular,
+			selectContractorBtn->Font = (gcnew System::Drawing::Font(L"Franklin Gothic Medium Cond", 14, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			selectContractorBtn->Dock = DockStyle::Fill;
 			selectContractorBtn->TabIndex = i;

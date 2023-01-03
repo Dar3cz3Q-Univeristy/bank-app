@@ -16,17 +16,15 @@ namespace AGHBank {
 	public ref class MainForm : public System::Windows::Forms::Form
 	{
 	private: System::Windows::Forms::Label^ userNameLb;
-
 	private: System::Windows::Forms::Panel^ PanelContainer;
 	private: System::Windows::Forms::Button^ paymentBtn;
-
-	public:
-
 	public:
 		int loggedUserID;
-		MainForm(int id)
+		String^ loggedUserName;
+		MainForm(int id, String^ name)
 		{
 			InitializeComponent();
+			loggedUserName = name;
 			loggedUserID = id;
 			//
 			//TODO: Add the constructor code here
@@ -49,17 +47,9 @@ namespace AGHBank {
 	private: System::Windows::Forms::Button^ accountBtn;
 	private: System::Windows::Forms::Button^ billBtn;
 	private: System::Windows::Forms::Button^ contractorsBtn;
-
-
-
-	private: System::Windows::Forms::Button^ cardsBtn;
+	private: System::Windows::Forms::Button^ settingsBtn;
 	private: System::Windows::Forms::Button^ transferBtn;
 	private: System::Windows::Forms::Label^ bankLogoLb;
-
-
-
-
-	protected:
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -79,10 +69,10 @@ namespace AGHBank {
 			this->bankLogoLb = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->settingsBtn = (gcnew System::Windows::Forms::Button());
 			this->paymentBtn = (gcnew System::Windows::Forms::Button());
 			this->transferBtn = (gcnew System::Windows::Forms::Button());
 			this->contractorsBtn = (gcnew System::Windows::Forms::Button());
-			this->cardsBtn = (gcnew System::Windows::Forms::Button());
 			this->billBtn = (gcnew System::Windows::Forms::Button());
 			this->accountBtn = (gcnew System::Windows::Forms::Button());
 			this->PanelContainer = (gcnew System::Windows::Forms::Panel());
@@ -143,10 +133,10 @@ namespace AGHBank {
 			// 
 			this->panel2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(13)), static_cast<System::Int32>(static_cast<System::Byte>(221)));
+			this->panel2->Controls->Add(this->settingsBtn);
 			this->panel2->Controls->Add(this->paymentBtn);
 			this->panel2->Controls->Add(this->transferBtn);
 			this->panel2->Controls->Add(this->contractorsBtn);
-			this->panel2->Controls->Add(this->cardsBtn);
 			this->panel2->Controls->Add(this->billBtn);
 			this->panel2->Controls->Add(this->accountBtn);
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Top;
@@ -154,6 +144,27 @@ namespace AGHBank {
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(1578, 71);
 			this->panel2->TabIndex = 1;
+			// 
+			// settingsBtn
+			// 
+			this->settingsBtn->BackColor = System::Drawing::Color::Transparent;
+			this->settingsBtn->Dock = System::Windows::Forms::DockStyle::Left;
+			this->settingsBtn->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->settingsBtn->FlatAppearance->BorderSize = 0;
+			this->settingsBtn->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(1)));
+			this->settingsBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->settingsBtn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->settingsBtn->Location = System::Drawing::Point(1315, 0);
+			this->settingsBtn->Name = L"settingsBtn";
+			this->settingsBtn->Size = System::Drawing::Size(263, 71);
+			this->settingsBtn->TabIndex = 3;
+			this->settingsBtn->TabStop = false;
+			this->settingsBtn->Text = L"Ustawienia";
+			this->settingsBtn->UseVisualStyleBackColor = false;
+			this->settingsBtn->Click += gcnew System::EventHandler(this, &MainForm::settingsBtn_Click);
 			// 
 			// paymentBtn
 			// 
@@ -167,12 +178,12 @@ namespace AGHBank {
 			this->paymentBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->paymentBtn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->paymentBtn->Location = System::Drawing::Point(1315, 0);
+			this->paymentBtn->Location = System::Drawing::Point(1052, 0);
 			this->paymentBtn->Name = L"paymentBtn";
 			this->paymentBtn->Size = System::Drawing::Size(263, 71);
 			this->paymentBtn->TabIndex = 6;
 			this->paymentBtn->TabStop = false;
-			this->paymentBtn->Text = L"Wp³ata/Wyp³ata";
+			this->paymentBtn->Text = L"Bankomat";
 			this->paymentBtn->UseVisualStyleBackColor = false;
 			this->paymentBtn->Click += gcnew System::EventHandler(this, &MainForm::paymentBtn_Click);
 			// 
@@ -188,7 +199,7 @@ namespace AGHBank {
 			this->transferBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->transferBtn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->transferBtn->Location = System::Drawing::Point(1052, 0);
+			this->transferBtn->Location = System::Drawing::Point(789, 0);
 			this->transferBtn->Name = L"transferBtn";
 			this->transferBtn->Size = System::Drawing::Size(263, 71);
 			this->transferBtn->TabIndex = 5;
@@ -209,7 +220,7 @@ namespace AGHBank {
 			this->contractorsBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->contractorsBtn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->contractorsBtn->Location = System::Drawing::Point(789, 0);
+			this->contractorsBtn->Location = System::Drawing::Point(526, 0);
 			this->contractorsBtn->Name = L"contractorsBtn";
 			this->contractorsBtn->Size = System::Drawing::Size(263, 71);
 			this->contractorsBtn->TabIndex = 4;
@@ -217,26 +228,6 @@ namespace AGHBank {
 			this->contractorsBtn->Text = L"Kontrahenci";
 			this->contractorsBtn->UseVisualStyleBackColor = false;
 			this->contractorsBtn->Click += gcnew System::EventHandler(this, &MainForm::contractorsBtn_Click);
-			// 
-			// cardsBtn
-			// 
-			this->cardsBtn->BackColor = System::Drawing::Color::Transparent;
-			this->cardsBtn->Dock = System::Windows::Forms::DockStyle::Left;
-			this->cardsBtn->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->cardsBtn->FlatAppearance->BorderSize = 0;
-			this->cardsBtn->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(1)));
-			this->cardsBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->cardsBtn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->cardsBtn->Location = System::Drawing::Point(526, 0);
-			this->cardsBtn->Name = L"cardsBtn";
-			this->cardsBtn->Size = System::Drawing::Size(263, 71);
-			this->cardsBtn->TabIndex = 3;
-			this->cardsBtn->TabStop = false;
-			this->cardsBtn->Text = L"Karty";
-			this->cardsBtn->UseVisualStyleBackColor = false;
 			// 
 			// billBtn
 			// 
@@ -317,12 +308,12 @@ namespace AGHBank {
 		void resetColorsBtns(void);
 	private:
 		void addUserControl(UserControl^ userControl);
-		void downloadBasicData(void);
 	private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void accountBtn_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void contractorsBtn_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void billBtn_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void paymentBtn_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void transferBtn_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void settingsBtn_Click(System::Object^ sender, System::EventArgs^ e);
 	};
 }

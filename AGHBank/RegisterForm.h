@@ -250,7 +250,6 @@ namespace AGHBank {
             this->surnameInput->Name = L"surnameInput";
             this->surnameInput->Size = System::Drawing::Size(413, 39);
             this->surnameInput->TabIndex = 2;
-            this->surnameInput->Text = L"Homa";
             // 
             // forenameInput
             // 
@@ -266,7 +265,6 @@ namespace AGHBank {
             this->forenameInput->Name = L"forenameInput";
             this->forenameInput->Size = System::Drawing::Size(413, 39);
             this->forenameInput->TabIndex = 1;
-            this->forenameInput->Text = L"Dariusz";
             // 
             // surnameLb
             // 
@@ -373,7 +371,6 @@ namespace AGHBank {
             this->phoneInput->Name = L"phoneInput";
             this->phoneInput->Size = System::Drawing::Size(413, 39);
             this->phoneInput->TabIndex = 5;
-            this->phoneInput->Text = L"123456789";
             // 
             // cardIDInput
             // 
@@ -390,7 +387,6 @@ namespace AGHBank {
             this->cardIDInput->Name = L"cardIDInput";
             this->cardIDInput->Size = System::Drawing::Size(413, 39);
             this->cardIDInput->TabIndex = 4;
-            this->cardIDInput->Text = L"ABS123456";
             // 
             // peselInput
             // 
@@ -406,7 +402,6 @@ namespace AGHBank {
             this->peselInput->Name = L"peselInput";
             this->peselInput->Size = System::Drawing::Size(413, 39);
             this->peselInput->TabIndex = 3;
-            this->peselInput->Text = L"02212603813";
             // 
             // forenameLb
             // 
@@ -496,7 +491,6 @@ namespace AGHBank {
             this->retypedPasswordInput->Name = L"retypedPasswordInput";
             this->retypedPasswordInput->Size = System::Drawing::Size(413, 39);
             this->retypedPasswordInput->TabIndex = 10;
-            this->retypedPasswordInput->Text = L"zaq1@WSX";
             this->retypedPasswordInput->UseSystemPasswordChar = true;
             // 
             // passwordInput
@@ -513,7 +507,6 @@ namespace AGHBank {
             this->passwordInput->Name = L"passwordInput";
             this->passwordInput->Size = System::Drawing::Size(413, 39);
             this->passwordInput->TabIndex = 9;
-            this->passwordInput->Text = L"zaq1@WSX";
             this->passwordInput->UseSystemPasswordChar = true;
             // 
             // emailInput
@@ -529,7 +522,6 @@ namespace AGHBank {
             this->emailInput->Name = L"emailInput";
             this->emailInput->Size = System::Drawing::Size(413, 39);
             this->emailInput->TabIndex = 8;
-            this->emailInput->Text = L"d@h.pl";
             // 
             // usernameLb
             // 
@@ -605,7 +597,6 @@ namespace AGHBank {
             this->usernameInput->Name = L"usernameInput";
             this->usernameInput->Size = System::Drawing::Size(413, 39);
             this->usernameInput->TabIndex = 7;
-            this->usernameInput->Text = L"Dar3cz3Q";
             // 
             // headerLb
             // 

@@ -104,7 +104,10 @@ System::Void BillsUC::BillsUC_Load(System::Object^ sender, System::EventArgs^ e)
 		removeBillBtn->UseVisualStyleBackColor = true;
 		removeBillBtn->Click += gcnew System::EventHandler(this, &BillsUC::removeBillBtn_Click);
 
-		this->billsTable->Controls->Add(removeBillBtn, 0, i);
+		if (i > 1) {
+			this->billsTable->Controls->Add(removeBillBtn, 0, i);
+		}
+
 		this->billsTable->Controls->Add(createBillBtn, 1, i);
 	}
 	catch (SqlException^ e) {

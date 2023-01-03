@@ -129,6 +129,7 @@
     <ClCompile Include="bcrypt.cpp" />
     <ClCompile Include="BillsUC.cpp" />
     <ClCompile Include="blowfish.cpp" />
+    <ClCompile Include="ChangePassword.cpp" />
     <ClCompile Include="ContractorsUC.cpp" />
     <ClCompile Include="CreateBill.cpp" />
     <ClCompile Include="CreateContractor.cpp" />
@@ -141,6 +142,7 @@
     <ClCompile Include="RegisterForm.cpp" />
     <ClCompile Include="RemoveBill.cpp" />
     <ClCompile Include="SelectContractor.cpp" />
+    <ClCompile Include="SettingsUC.cpp" />
     <ClCompile Include="TransferUC.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +153,9 @@
     <ClInclude Include="bcrypt.h" />
     <ClInclude Include="BillsUC.h">
       <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="ChangePassword.h">
+      <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="ComboItem.h" />
     <ClInclude Include="ContractorsUC.h">
@@ -190,6 +195,9 @@
     <ClInclude Include="SelectContractor.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="SettingsUC.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
     <ClInclude Include="StringConversion.h" />
     <ClInclude Include="TransferUC.h">
       <FileType>CppControl</FileType>
@@ -202,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BillsUC.resx">
       <DependentUpon>BillsUC.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContractorsUC.resx">
       <DependentUpon>ContractorsUC.h</DependentUpon>
@@ -235,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SelectContractor.resx">
       <DependentUpon>SelectContractor.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsUC.resx">
+      <DependentUpon>SettingsUC.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransferUC.resx">
       <DependentUpon>TransferUC.h</DependentUpon>

@@ -13,7 +13,7 @@ System::Void RegisterForm::RegisterForm_Load(System::Object^ sender, System::Eve
 	std::time_t now = std::time(0);
 	std::tm* today = std::localtime(&now);
 	this->birthDatePicker->MaxDate = System::DateTime(today->tm_year + 1900, today->tm_mon + 1, today->tm_mday, 0, 0, 0, 0);
-	this->birthDatePicker->Value = System::DateTime(today->tm_year + 1882, today->tm_mon + 1, today->tm_mday, 0, 0, 0, 0);
+	this->birthDatePicker->Value = System::DateTime(today->tm_year + 1882, today->tm_mon + 1, today->tm_mday - 1, 0, 0, 0, 0);
 }
 
 System::Void RegisterForm::noAccountLink_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {

@@ -84,6 +84,12 @@
     <ClCompile Include="CreateContractor.cpp">
       <Filter>Nested Forms</Filter>
     </ClCompile>
+    <ClCompile Include="SettingsUC.cpp">
+      <Filter>UserControls</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangePassword.cpp">
+      <Filter>Nested Forms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainForm.h">
@@ -154,6 +160,12 @@
     </ClInclude>
     <ClInclude Include="ArrayCheck.h">
       <Filter>Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingsUC.h">
+      <Filter>UserControls</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangePassword.h">
+      <Filter>Nested Forms</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
