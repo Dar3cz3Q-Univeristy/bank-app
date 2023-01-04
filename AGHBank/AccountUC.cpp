@@ -10,7 +10,7 @@ System::Void AccountUC::AccountUC_Load(System::Object^ sender, System::EventArgs
 		SqlConnection sqlConn(ConvertString::toSystemString(DatabaseConfig::sqlConnectionString));
 		sqlConn.Open();
 
-		String^ sqlQuery = "SELECT TOP 1 CONCAT(pd.Forename, ' ', pd.Surname), FORMAT(pl.CreatedTime, 'dd.MM.yyyy hh:mm'), FLOOR(DATEDIFF(day, pd.BirthDate, GETDATE()) / 365.2425), ba.AccountID, SUBSTRING(pd.Pesel, 10, 1) FROM PersonDetails as pd JOIN PersonLogins as pl ON pd.PersonID = pl.PersonID JOIN BankAccounts as ba ON pd.PersonID = ba.PersonID WHERE pl.PersonID = @personID AND ba.Active = 1 ORDER BY NEWID(); ";
+		String^ sqlQuery = "SELECT TOP 1 CONCAT(pd.Forename, ' ', pd.Surname), FORMAT(pl.CreatedTime, 'dd.MM.yyyy HH:mm'), FLOOR(DATEDIFF(day, pd.BirthDate, GETDATE()) / 365.2425), ba.AccountID, SUBSTRING(pd.Pesel, 10, 1) FROM PersonDetails as pd JOIN PersonLogins as pl ON pd.PersonID = pl.PersonID JOIN BankAccounts as ba ON pd.PersonID = ba.PersonID WHERE pl.PersonID = @personID AND ba.Active = 1 ORDER BY NEWID(); ";
 
 		SqlCommand command(sqlQuery, % sqlConn);
 		command.Parameters->AddWithValue("@personID", loggedUserID);

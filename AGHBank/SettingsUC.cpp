@@ -55,10 +55,11 @@ System::Void SettingsUC::deleteAccountBtn_Click(System::Object^ sender, System::
 		SqlConnection sqlConn(ConvertString::toSystemString(DatabaseConfig::sqlConnectionString));
 		sqlConn.Open();
 
-		String^ sqlQuery = "UPDATE PersonLogins SET Active = 0 WHERE PersonID = @personID;";
+		String^ sqlQuery = "UPDATE PersonLogins SET Active = 0, Username = @removedName WHERE PersonID = @personID;";
 
 		SqlCommand command(sqlQuery, % sqlConn);
 		command.Parameters->AddWithValue("@personID", loggedUserID);
+		command.Parameters->AddWithValue("@removedName", "DeletedUser" + loggedUserID);
 
 		command.ExecuteNonQuery();
 
