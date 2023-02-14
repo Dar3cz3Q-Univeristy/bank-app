@@ -1,4 +1,6 @@
-﻿  MainForm.cpp
+﻿  AccountUC.cpp
+  HistoryForm.cpp
+  MainForm.cpp
   SettingsUC.cpp
   Generating Code...
   AccountUC.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
