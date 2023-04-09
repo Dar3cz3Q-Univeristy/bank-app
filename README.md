@@ -1,7 +1,7 @@
 # BankApp
 
-Structure of Database.h file:
-
+## Structure of Database.h file:
+```
 #pragma once
 #include <string>
 
@@ -13,3 +13,4 @@ namespace DatabaseConfig {
 
 	std::string sqlConnectionString = "Data Source=" + hostname + ";Initial Catalog=" + database + ";User ID=" + username + ";Password=" + password + "";
 }
+```
