@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{e09ad9f7-c18b-48da-ade2-e5841f3b5d81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bcrypt">
+      <UniqueIdentifier>{908cf1d6-cc40-40f4-8645-53ee6e25b50f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Functions">
+      <UniqueIdentifier>{60526525-ba49-4d28-a2a7-9c322bbf9412}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{6c0ed41a-ad6d-478c-abac-2b37e4ffb3ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UserControls">
+      <UniqueIdentifier>{0962f2cd-189b-4d02-87a1-19e0db49e23e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Nested Forms">
+      <UniqueIdentifier>{7cd1fd55-162e-406c-9a4a-a11c68a179ed}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MainForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Program.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PasswordForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RegisterForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bcrypt.cpp">
+      <Filter>bcrypt</Filter>
+    </ClCompile>
+    <ClCompile Include="blowfish.cpp">
+      <Filter>bcrypt</Filter>
+    </ClCompile>
+    <ClCompile Include="AccountUC.cpp">
+      <Filter>UserControls</Filter>
+    </ClCompile>
+    <ClCompile Include="BillsUC.cpp">
+      <Filter>UserControls</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateBill.cpp">
+      <Filter>Nested Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="HistoryForm.cpp">
+      <Filter>Nested Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveBill.cpp">
+      <Filter>Nested Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="PaymentUC.cpp">
+      <Filter>UserControls</Filter>
+    </ClCompile>
+    <ClCompile Include="TransferUC.cpp">
+      <Filter>UserControls</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectContractor.cpp">
+      <Filter>Nested Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="ContractorsUC.cpp">
+      <Filter>UserControls</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateContractor.cpp">
+      <Filter>Nested Forms</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingsUC.cpp">
+      <Filter>UserControls</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangePassword.cpp">
+      <Filter>Nested Forms</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MainForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PasswordForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RegisterForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Database.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="bcrypt.h">
+      <Filter>bcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="node_blf.h">
+      <Filter>bcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="openbsd.h">
+      <Filter>bcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="StringConversion.h">
+      <Filter>Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="PersonDetailsConstraints.h">
+      <Filter>Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="User.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountUC.h">
+      <Filter>UserControls</Filter>
+    </ClInclude>
+    <ClInclude Include="BillsUC.h">
+      <Filter>UserControls</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateBill.h">
+      <Filter>Nested Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="HistoryForm.h">
+      <Filter>Nested Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoveBill.h">
+      <Filter>Nested Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="ComboItem.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="PaymentUC.h">
+      <Filter>UserControls</Filter>
+    </ClInclude>
+    <ClInclude Include="TransferUC.h">
+      <Filter>UserControls</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectContractor.h">
+      <Filter>Nested Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="ContractorsUC.h">
+      <Filter>UserControls</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateContractor.h">
+      <Filter>Nested Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayCheck.h">
+      <Filter>Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingsUC.h">
+      <Filter>UserControls</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangePassword.h">
+      <Filter>Nested Forms</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
