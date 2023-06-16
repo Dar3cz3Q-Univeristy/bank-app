@@ -1,6 +1,21 @@
-# BankApp
+# Disclaimer
+**AGHBankApp** is final project on the basis of computer science in the 1st semester of studies. Application isn’t endorsed by *Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie* and doesn’t reflect the views or opinions of it.
 
-## Structure of Database.h file:
+# Installation
+## By installer
+Download *BankApp.zip* file, unzip it and run *setup.exe*. Follow the steps shown on the screen. Program will use prepared online MSSQL database.
+
+## By GitHub repo
+### In order to run this application, you need MSSQL Server.
+1. Clone the repository,
+2. Use *database/Database-script.sql* to create database on your MSSQL Server,
+3. Create *Database.h* file in *src/AGHBank/* folder. Structure of the file is shown below.
+4. Compile and run the program. 
+
+### Note
+If LNK2005 error is shown add ```/FORCE:MULTIPLE``` to the Linker’s Command Line options.
+
+### Structure of Database.h file:
 ```
 #pragma once
 #include <string>
