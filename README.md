@@ -14,3 +14,6 @@ namespace DatabaseConfig {
 	std::string sqlConnectionString = "Data Source=" + hostname + ";Initial Catalog=" + database + ";User ID=" + username + ";Password=" + password + "";
 }
 ```
+
+## LNK2005
+If the error above is shown add ```/FORCE:MULTIPLE``` to the Linker's Command Line option
