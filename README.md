@@ -16,4 +16,4 @@ namespace DatabaseConfig {
 ```
 
 ## LNK2005
-If the error above is shown add ```/FORCE:MULTIPLE``` to the Linker's Command Line option
+If the error above is shown, add ```/FORCE:MULTIPLE``` to the Linker's Command Line option
