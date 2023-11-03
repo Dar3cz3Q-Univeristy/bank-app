@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AGHBank", "AGHBank\AGHBank.vcxproj", "{830FFA97-3AC4-49CD-B594-45B7D2D381E6}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AGHBank Installer", "Bank Installer\Bank Installer.vdproj", "{DA46782B-58FA-4C20-8159-9ABEA67B8C38}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AGHBank Installer", "AGHBank Installer\AGHBank Installer.vdproj", "{CD03F12D-55F2-424B-B6CA-92C63F116EB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +23,11 @@ Global
 		{830FFA97-3AC4-49CD-B594-45B7D2D381E6}.Release|x64.Build.0 = Release|x64
 		{830FFA97-3AC4-49CD-B594-45B7D2D381E6}.Release|x86.ActiveCfg = Release|Win32
 		{830FFA97-3AC4-49CD-B594-45B7D2D381E6}.Release|x86.Build.0 = Release|Win32
-		{DA46782B-58FA-4C20-8159-9ABEA67B8C38}.Debug|x64.ActiveCfg = Debug
-		{DA46782B-58FA-4C20-8159-9ABEA67B8C38}.Debug|x64.Build.0 = Debug
-		{DA46782B-58FA-4C20-8159-9ABEA67B8C38}.Debug|x86.ActiveCfg = Debug
-		{DA46782B-58FA-4C20-8159-9ABEA67B8C38}.Release|x64.ActiveCfg = Release
-		{DA46782B-58FA-4C20-8159-9ABEA67B8C38}.Release|x64.Build.0 = Release
-		{DA46782B-58FA-4C20-8159-9ABEA67B8C38}.Release|x86.ActiveCfg = Release
+		{CD03F12D-55F2-424B-B6CA-92C63F116EB6}.Debug|x64.ActiveCfg = Debug
+		{CD03F12D-55F2-424B-B6CA-92C63F116EB6}.Debug|x86.ActiveCfg = Debug
+		{CD03F12D-55F2-424B-B6CA-92C63F116EB6}.Release|x64.ActiveCfg = Release
+		{CD03F12D-55F2-424B-B6CA-92C63F116EB6}.Release|x64.Build.0 = Release
+		{CD03F12D-55F2-424B-B6CA-92C63F116EB6}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>E:\AGHBankApp\src\x64\Release\AGHBank.exe</FullPath>
+      <FullPath>D:\Programowanie\AGHBankApp\src\x64\Release\AGHBank.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

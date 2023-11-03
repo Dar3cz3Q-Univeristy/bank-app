@@ -104,9 +104,6 @@
     <ClInclude Include="RegisterForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Database.h">
-      <Filter>Config</Filter>
-    </ClInclude>
     <ClInclude Include="bcrypt.h">
       <Filter>bcrypt</Filter>
     </ClInclude>
@@ -166,6 +163,9 @@
     </ClInclude>
     <ClInclude Include="ChangePassword.h">
       <Filter>Nested Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="Database.h">
+      <Filter>Config</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
