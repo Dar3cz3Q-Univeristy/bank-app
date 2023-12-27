@@ -3,7 +3,7 @@
 
 # Installation
 ## By installer
-Download [BankApp.zip](https://www.mediafire.com/file/l62zda59vbxdys9/BankApp.zip/file) file, unzip it and run "setup.exe". Follow the steps shown on the screen. Program will use prepared online MSSQL database (free tier so it's not the fastest one).
+Download [AGHBank.zip](https://www.mediafire.com/file/iqp9gmyjaid0obe/AGHBank.zip/file) file, unzip it and run "setup.exe". Follow the steps shown on the screen. Program will use prepared online MSSQL database (free tier so it's not the fastest one).
 
 ## By GitHub repo
 ### In order to run this application, you need MSSQL Server.
