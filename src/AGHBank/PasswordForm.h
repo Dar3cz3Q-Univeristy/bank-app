@@ -123,9 +123,9 @@ namespace AGHBank {
 				static_cast<System::Byte>(238)));
 			this->helpLb->Location = System::Drawing::Point(12, 181);
 			this->helpLb->Name = L"helpLb";
-			this->helpLb->Size = System::Drawing::Size(206, 37);
+			this->helpLb->Size = System::Drawing::Size(200, 37);
 			this->helpLb->TabIndex = 0;
-			this->helpLb->Text = L"Wpisz has³o:";
+			this->helpLb->Text = L"Wpisz haslo:";
 			// 
 			// nextBtn
 			// 
@@ -164,7 +164,7 @@ namespace AGHBank {
 			this->greetingLb->Name = L"greetingLb";
 			this->greetingLb->Size = System::Drawing::Size(754, 98);
 			this->greetingLb->TabIndex = 0;
-			this->greetingLb->Text = L"Zaloguj siê";
+			this->greetingLb->Text = L"Zaloguj sie";
 			this->greetingLb->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
 			// panel1

@@ -117,7 +117,7 @@ namespace AGHBank {
 			this->headerLb->Name = L"headerLb";
 			this->headerLb->Size = System::Drawing::Size(754, 98);
 			this->headerLb->TabIndex = 0;
-			this->headerLb->Text = L"Zaloguj siê";
+			this->headerLb->Text = L"Zaloguj sie";
 			this->headerLb->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
 			// panel2
@@ -141,7 +141,7 @@ namespace AGHBank {
 			this->helpLb->Name = L"helpLb";
 			this->helpLb->Size = System::Drawing::Size(398, 37);
 			this->helpLb->TabIndex = 0;
-			this->helpLb->Text = L"Wpisz nazwê u¿ytkownika:";
+			this->helpLb->Text = L"Wpisz nazwe uzytkownika:";
 			// 
 			// nextBtn
 			// 

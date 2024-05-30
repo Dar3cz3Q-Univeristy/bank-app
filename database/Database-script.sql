@@ -1,8 +1,8 @@
-DROP DATABASE AGHBank
+DROP DATABASE bank_app
 
-CREATE DATABASE AGHBank
+CREATE DATABASE bank_app
 
-USE AGHBank
+USE bank_app
 
 /*
 *

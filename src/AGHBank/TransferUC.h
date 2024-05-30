@@ -126,7 +126,7 @@ namespace AGHBank {
 			this->ownTransferRadioBtn->Name = L"ownTransferRadioBtn";
 			this->ownTransferRadioBtn->Size = System::Drawing::Size(735, 60);
 			this->ownTransferRadioBtn->TabIndex = 3;
-			this->ownTransferRadioBtn->Text = L"Przelew w³asny";
+			this->ownTransferRadioBtn->Text = L"Przelew wlasny";
 			this->ownTransferRadioBtn->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			this->ownTransferRadioBtn->UseVisualStyleBackColor = true;
 			// 
@@ -354,9 +354,9 @@ namespace AGHBank {
 			this->titleLb->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 14, System::Drawing::FontStyle::Bold));
 			this->titleLb->Location = System::Drawing::Point(417, 42);
 			this->titleLb->Name = L"titleLb";
-			this->titleLb->Size = System::Drawing::Size(98, 37);
+			this->titleLb->Size = System::Drawing::Size(97, 37);
 			this->titleLb->TabIndex = 7;
-			this->titleLb->Text = L"Tytu³:";
+			this->titleLb->Text = L"Tytul:";
 			// 
 			// TransferUC
 			// 

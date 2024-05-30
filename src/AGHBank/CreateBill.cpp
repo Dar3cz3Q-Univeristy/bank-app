@@ -24,7 +24,7 @@ System::Void CreateBill::CreateBill_Load(System::Object^ sender, System::EventAr
 		sqlConn.Close();
 	}
 	catch (SqlException^ e) {
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 }
 
@@ -54,7 +54,7 @@ System::Void CreateBill::AccountTypeCombo_SelectedIndexChanged(System::Object^ s
 			sqlConn.Close();
 		}
 		catch (SqlException^ e) {
-			MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+			MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 		}
 	}
 	else {
@@ -90,12 +90,12 @@ System::Void CreateBill::createBillBtn_Click(System::Object^ sender, System::Eve
 		command.ExecuteNonQuery();
 		sqlConn.Close();
 
-		MessageBox::Show("Rachunek zosta³ utworzony pomyœlnie", "Informacja", MessageBoxButtons::OK);
+		MessageBox::Show("Rachunek zostal utworzony pomyslnie", "Informacja", MessageBoxButtons::OK);
 
 		this->Close();
 	}
 	catch (SqlException^ e) {
 		this->createBillBtn->Enabled = true;
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 }

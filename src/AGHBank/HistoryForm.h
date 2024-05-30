@@ -215,7 +215,7 @@ namespace AGHBank {
 			this->titleLb->Name = L"titleLb";
 			this->titleLb->Size = System::Drawing::Size(385, 50);
 			this->titleLb->TabIndex = 1;
-			this->titleLb->Text = L"Tytu³";
+			this->titleLb->Text = L"Tytul";
 			this->titleLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// contractorLb

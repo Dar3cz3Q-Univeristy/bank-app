@@ -268,7 +268,7 @@ namespace AGHBank {
 			this->allIntrestLb->Name = L"allIntrestLb";
 			this->allIntrestLb->Size = System::Drawing::Size(471, 96);
 			this->allIntrestLb->TabIndex = 4;
-			this->allIntrestLb->Text = L"Ca³kowita kwota odsetek:";
+			this->allIntrestLb->Text = L"Calkowita kwota odsetek:";
 			this->allIntrestLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// allOperationLb
@@ -281,7 +281,7 @@ namespace AGHBank {
 			this->allOperationLb->Name = L"allOperationLb";
 			this->allOperationLb->Size = System::Drawing::Size(471, 95);
 			this->allOperationLb->TabIndex = 1;
-			this->allOperationLb->Text = L"Ca³kowita iloœæ operacji:";
+			this->allOperationLb->Text = L"Calkowita ilosc operacji:";
 			this->allOperationLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// allIncomeLb
@@ -293,7 +293,7 @@ namespace AGHBank {
 			this->allIncomeLb->Name = L"allIncomeLb";
 			this->allIncomeLb->Size = System::Drawing::Size(471, 95);
 			this->allIncomeLb->TabIndex = 2;
-			this->allIncomeLb->Text = L"Ca³kowite przychody:";
+			this->allIncomeLb->Text = L"Calkowite przychody:";
 			this->allIncomeLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// allExpenseLb
@@ -305,7 +305,7 @@ namespace AGHBank {
 			this->allExpenseLb->Name = L"allExpenseLb";
 			this->allExpenseLb->Size = System::Drawing::Size(471, 95);
 			this->allExpenseLb->TabIndex = 3;
-			this->allExpenseLb->Text = L"Ca³kowite wydatki:";
+			this->allExpenseLb->Text = L"Calkowite wydatki:";
 			this->allExpenseLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// allOperationValLb

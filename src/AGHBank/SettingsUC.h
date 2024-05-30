@@ -136,7 +136,7 @@ namespace AGHBank {
 			this->deleteAccountBtn->Name = L"deleteAccountBtn";
 			this->deleteAccountBtn->Size = System::Drawing::Size(690, 86);
 			this->deleteAccountBtn->TabIndex = 7;
-			this->deleteAccountBtn->Text = L"Usuñ konto";
+			this->deleteAccountBtn->Text = L"Usun konto";
 			this->deleteAccountBtn->UseVisualStyleBackColor = false;
 			this->deleteAccountBtn->Click += gcnew System::EventHandler(this, &SettingsUC::deleteAccountBtn_Click);
 			// 
@@ -148,7 +148,7 @@ namespace AGHBank {
 			this->changePasswordBtn->Name = L"changePasswordBtn";
 			this->changePasswordBtn->Size = System::Drawing::Size(690, 86);
 			this->changePasswordBtn->TabIndex = 6;
-			this->changePasswordBtn->Text = L"Zmieñ has³o";
+			this->changePasswordBtn->Text = L"Zmien haslo";
 			this->changePasswordBtn->UseVisualStyleBackColor = true;
 			this->changePasswordBtn->Click += gcnew System::EventHandler(this, &SettingsUC::changePasswordBtn_Click);
 			// 
@@ -363,7 +363,7 @@ namespace AGHBank {
 			this->forenameLb->Name = L"forenameLb";
 			this->forenameLb->Size = System::Drawing::Size(348, 65);
 			this->forenameLb->TabIndex = 12;
-			this->forenameLb->Text = L"Imiê:";
+			this->forenameLb->Text = L"Imie:";
 			this->forenameLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// label13

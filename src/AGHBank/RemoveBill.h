@@ -66,7 +66,7 @@ namespace AGHBank {
 			this->closeBillLb->Name = L"closeBillLb";
 			this->closeBillLb->Size = System::Drawing::Size(643, 65);
 			this->closeBillLb->TabIndex = 0;
-			this->closeBillLb->Text = L"Wybierz rachunek do zamkniêcia:";
+			this->closeBillLb->Text = L"Wybierz rachunek do zamkniecia:";
 			this->closeBillLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// removeBillBtn
@@ -122,7 +122,7 @@ namespace AGHBank {
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;
 			this->Name = L"RemoveBill";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterParent;
-			this->Text = L"Zamknij istniej¹cy rachunek";
+			this->Text = L"Zamknij istniejacy rachunek";
 			this->Load += gcnew System::EventHandler(this, &RemoveBill::RemoveBill_Load);
 			this->ResumeLayout(false);
 

@@ -115,7 +115,7 @@ namespace AGHBank {
 			this->customNameLb->Name = L"customNameLb";
 			this->customNameLb->Size = System::Drawing::Size(235, 225);
 			this->customNameLb->TabIndex = 0;
-			this->customNameLb->Text = L"Nazwa w³asna:";
+			this->customNameLb->Text = L"Nazwa wlasna:";
 			this->customNameLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// customNameInput

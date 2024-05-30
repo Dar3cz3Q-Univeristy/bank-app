@@ -49,7 +49,7 @@ System::Void BillsUC::BillsUC_Load(System::Object^ sender, System::EventArgs^ e)
 			numberLabel->Text = number;
 
 			ToolTip^ numberLabelToolTip = gcnew ToolTip();
-			numberLabelToolTip->SetToolTip(numberLabel, "Naciœnij dwukrotnie aby skopiowaæ");
+			numberLabelToolTip->SetToolTip(numberLabel, "Nacisnij dwukrotnie aby skopiowac");
 
 			Label^ ballanceLabel = gcnew Label();
 			ballanceLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -110,7 +110,7 @@ System::Void BillsUC::BillsUC_Load(System::Object^ sender, System::EventArgs^ e)
 		this->billsTable->Controls->Add(createBillBtn, 1, i);
 	}
 	catch (SqlException^ e) {
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 	this->billsTable->AutoScroll = true;
 }

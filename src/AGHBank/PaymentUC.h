@@ -94,7 +94,7 @@ namespace AGHBank {
 			this->paymentRadioBtn->Size = System::Drawing::Size(735, 60);
 			this->paymentRadioBtn->TabIndex = 1;
 			this->paymentRadioBtn->TabStop = true;
-			this->paymentRadioBtn->Text = L"Wp³ata gotówki";
+			this->paymentRadioBtn->Text = L"Wplata gotówki";
 			this->paymentRadioBtn->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			this->paymentRadioBtn->UseVisualStyleBackColor = true;
 			// 
@@ -118,7 +118,7 @@ namespace AGHBank {
 			this->paycheckRadioBtn->Name = L"paycheckRadioBtn";
 			this->paycheckRadioBtn->Size = System::Drawing::Size(735, 60);
 			this->paycheckRadioBtn->TabIndex = 2;
-			this->paycheckRadioBtn->Text = L"Wyp³ata gotówki";
+			this->paycheckRadioBtn->Text = L"Wyplata gotówki";
 			this->paycheckRadioBtn->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			this->paycheckRadioBtn->UseVisualStyleBackColor = true;
 			// 

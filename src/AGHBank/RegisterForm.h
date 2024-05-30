@@ -132,7 +132,7 @@ namespace AGHBank {
                 static_cast<System::Byte>(238)));
             this->haveAccountLink->Location = System::Drawing::Point(1399, 856);
             this->haveAccountLink->Name = L"haveAccountLink";
-            this->haveAccountLink->Size = System::Drawing::Size(167, 29);
+            this->haveAccountLink->Size = System::Drawing::Size(168, 29);
             this->haveAccountLink->TabIndex = 12;
             this->haveAccountLink->TabStop = true;
             this->haveAccountLink->Text = L"Mam ju¿ konto";
@@ -415,7 +415,7 @@ namespace AGHBank {
             this->forenameLb->Name = L"forenameLb";
             this->forenameLb->Size = System::Drawing::Size(348, 65);
             this->forenameLb->TabIndex = 12;
-            this->forenameLb->Text = L"Imiê:";
+            this->forenameLb->Text = L"Imie:";
             this->forenameLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
             // 
             // label14
@@ -535,7 +535,7 @@ namespace AGHBank {
             this->usernameLb->Name = L"usernameLb";
             this->usernameLb->Size = System::Drawing::Size(348, 65);
             this->usernameLb->TabIndex = 0;
-            this->usernameLb->Text = L"Nazwa u¿ytkownika:";
+            this->usernameLb->Text = L"Nazwa uzytkownika:";
             this->usernameLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
             // 
             // emailLb
@@ -565,7 +565,7 @@ namespace AGHBank {
             this->passwordLb->Name = L"passwordLb";
             this->passwordLb->Size = System::Drawing::Size(348, 65);
             this->passwordLb->TabIndex = 3;
-            this->passwordLb->Text = L"Has³o:";
+            this->passwordLb->Text = L"Haslo:";
             this->passwordLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
             // 
             // retypedPasswordLb
@@ -580,7 +580,7 @@ namespace AGHBank {
             this->retypedPasswordLb->Name = L"retypedPasswordLb";
             this->retypedPasswordLb->Size = System::Drawing::Size(348, 65);
             this->retypedPasswordLb->TabIndex = 4;
-            this->retypedPasswordLb->Text = L"Powtórz has³o:";
+            this->retypedPasswordLb->Text = L"Powtórz haslo:";
             this->retypedPasswordLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
             // 
             // usernameInput

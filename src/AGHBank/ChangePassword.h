@@ -95,7 +95,7 @@ namespace AGHBank {
 			this->createBillBtn->Name = L"createBillBtn";
 			this->createBillBtn->Size = System::Drawing::Size(267, 60);
 			this->createBillBtn->TabIndex = 8;
-			this->createBillBtn->Text = L"Zmieñ has³o";
+			this->createBillBtn->Text = L"Zmien haslo";
 			this->createBillBtn->UseVisualStyleBackColor = false;
 			this->createBillBtn->Click += gcnew System::EventHandler(this, &ChangePassword::createBillBtn_Click);
 			// 
@@ -165,7 +165,7 @@ namespace AGHBank {
 			this->accountTypeLb->Name = L"accountTypeLb";
 			this->accountTypeLb->Size = System::Drawing::Size(327, 129);
 			this->accountTypeLb->TabIndex = 1;
-			this->accountTypeLb->Text = L"Aktualne has³o:";
+			this->accountTypeLb->Text = L"Aktualne haslo:";
 			this->accountTypeLb->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// label1
@@ -179,7 +179,7 @@ namespace AGHBank {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(327, 129);
 			this->label1->TabIndex = 2;
-			this->label1->Text = L"Nowe has³o:";
+			this->label1->Text = L"Nowe haslo:";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// label2
@@ -193,7 +193,7 @@ namespace AGHBank {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(327, 131);
 			this->label2->TabIndex = 3;
-			this->label2->Text = L"Powtórz nowe has³o:";
+			this->label2->Text = L"Powtórz nowe haslo:";
 			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// ChangePassword
@@ -207,7 +207,7 @@ namespace AGHBank {
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;
 			this->Name = L"ChangePassword";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterParent;
-			this->Text = L"Zmieñ has³o";
+			this->Text = L"Zmien haslo";
 			this->tableLayoutPanel1->ResumeLayout(false);
 			this->tableLayoutPanel1->PerformLayout();
 			this->ResumeLayout(false);

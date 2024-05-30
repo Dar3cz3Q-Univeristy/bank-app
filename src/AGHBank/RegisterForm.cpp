@@ -69,7 +69,7 @@ System::Void RegisterForm::nextBtn_Click(System::Object^ sender, System::EventAr
 	}
 
 	if (emptyFields) {
-		this->registerErrorLb->Text = "Uzupe³nij puste pola!";
+		this->registerErrorLb->Text = "Uzupelnij puste pola!";
 		this->nextBtn->Enabled = true;
 		return;
 	}
@@ -95,7 +95,7 @@ System::Void RegisterForm::nextBtn_Click(System::Object^ sender, System::EventAr
 	}
 
 	if (!PersonDetailsCheck::isAdult(birthDate)) {
-		this->registerErrorLb->Text = "Osoba musi byæ pe³noletnia!";
+		this->registerErrorLb->Text = "Osoba musi byæ pelnoletnia!";
 		this->nextBtn->Enabled = true;
 		return;
 	}
@@ -119,13 +119,13 @@ System::Void RegisterForm::nextBtn_Click(System::Object^ sender, System::EventAr
 	bool isPasswordValid = regex_match(passwordString, regexPasswordRule);
 
 	if (!isPasswordValid) {
-		this->registerErrorLb->Text = "Has³o musi posiadaæ od 4 do 16 znaków, du¿¹ literê, ma³¹ literê, liczbê, znak specjalny!";
+		this->registerErrorLb->Text = "Haslo musi posiadaæ od 4 do 16 znaków, duza litere, mala litere, liczbe, znak specjalny!";
 		this->nextBtn->Enabled = true;
 		return;
 	}
 
 	if (password != retypedPassword) {
-		this->registerErrorLb->Text = "Has³a nie s¹ takie same!";
+		this->registerErrorLb->Text = "Hasla nie sa takie same!";
 		this->nextBtn->Enabled = true;
 		return;
 	}
@@ -154,7 +154,7 @@ System::Void RegisterForm::nextBtn_Click(System::Object^ sender, System::EventAr
 		command.ExecuteNonQuery();
 		sqlConn.Close();
 
-		MessageBox::Show("Konto zosta³o utworzone pomyœlnie", "Informacja", MessageBoxButtons::OK);
+		MessageBox::Show("Konto zostalo utworzone pomyslnie", "Informacja", MessageBoxButtons::OK);
 
 		this->switchToLogin = true;
 		this->Close();
@@ -162,13 +162,13 @@ System::Void RegisterForm::nextBtn_Click(System::Object^ sender, System::EventAr
 	catch (SqlException^ e) {
 		this->nextBtn->Enabled = true;
 		if (e->Number == 53) {
-			this->registerErrorLb->Text = "Problem z baz¹ danych. Spróbuj ponownie za kilka minut.";
+			this->registerErrorLb->Text = "Problem z baza danych. Spróbuj ponownie za kilka minut.";
 			return;
 		}
 		if (e->Number == 2627) {
-			this->registerErrorLb->Text = "U¿ytkownk ju¿ istnieje, Pewne dane siê powtarzaj¹!";
+			this->registerErrorLb->Text = "Uzytkownk juz istnieje, Pewne dane sie powtarzaja!";
 			return;
 		}
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 }
