@@ -47,7 +47,7 @@ System::Void ContractorsUC::ContractorsUC_Load(System::Object^ sender, System::E
 			deleteBtn->Dock = DockStyle::Fill;
 			deleteBtn->TabIndex = i;
 			deleteBtn->Tag = L"" + contractorID;
-			deleteBtn->Text = L"Usuñ";
+			deleteBtn->Text = L"Usun";
 			deleteBtn->UseVisualStyleBackColor = true;
 			deleteBtn->Click += gcnew System::EventHandler(this, &ContractorsUC::deleteContractorBtn_Click);
 
@@ -77,7 +77,7 @@ System::Void ContractorsUC::ContractorsUC_Load(System::Object^ sender, System::E
 		this->contractorsLayoutPanel->Controls->Add(createBillBtn, 0, i);
 	}
 	catch (SqlException^ e) {
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 	this->contractorsLayoutPanel->AutoScroll = true;
 }
@@ -103,9 +103,9 @@ System::Void ContractorsUC::deleteContractorBtn_Click(System::Object^ sender, Sy
 		command.ExecuteNonQuery();
 		sqlConn.Close();
 
-		MessageBox::Show("Kontrahent zosta³ usuniêty", "Informacja", MessageBoxButtons::OK);
+		MessageBox::Show("Kontrahent zostal usuniety", "Informacja", MessageBoxButtons::OK);
 	}
 	catch (SqlException^ e) {
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 }

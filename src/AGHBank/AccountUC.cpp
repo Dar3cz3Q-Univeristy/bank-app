@@ -149,6 +149,6 @@ System::Void AccountUC::AccountUC_Load(System::Object^ sender, System::EventArgs
 		sqlConn.Close();
 	}
 	catch (SqlException^ e) {
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 }

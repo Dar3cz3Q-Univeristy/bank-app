@@ -38,7 +38,7 @@ System::Void SettingsUC::SettingsUC_Load(System::Object^ sender, System::EventAr
 		sqlConn.Close();
 	}
 	catch (SqlException^ e) {
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 }
 
@@ -48,7 +48,7 @@ System::Void SettingsUC::changePasswordBtn_Click(System::Object^ sender, System:
 }
 
 System::Void SettingsUC::deleteAccountBtn_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (MessageBox::Show("Czy na pewno chcesz usun¹æ konto?", "Usuwanie konta", MessageBoxButtons::YesNo) != ::DialogResult::Yes) {
+	if (MessageBox::Show("Czy na pewno chcesz usunac konto?", "Usuwanie konta", MessageBoxButtons::YesNo) != ::DialogResult::Yes) {
 		return;
 	}
 	try {
@@ -66,7 +66,7 @@ System::Void SettingsUC::deleteAccountBtn_Click(System::Object^ sender, System::
 		sqlConn.Close();
 	}
 	catch (SqlException^ e) {
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 	Application::Exit();
 }
@@ -97,7 +97,7 @@ System::Void SettingsUC::nextBtn_Click(System::Object^ sender, System::EventArgs
 	}
 
 	if (emptyFields) {
-		this->settingsErrorLb->Text = "Uzupe³nij puste pola!";
+		this->settingsErrorLb->Text = "Uzupelnij puste pola!";
 		this->nextBtn->Enabled = true;
 		return;
 	}
@@ -109,7 +109,7 @@ System::Void SettingsUC::nextBtn_Click(System::Object^ sender, System::EventArgs
 	}
 
 	if (!PersonDetailsCheck::isAdult(birthDate)) {
-		this->settingsErrorLb->Text = "Osoba musi byæ pe³noletnia!";
+		this->settingsErrorLb->Text = "Osoba musi byc pelnoletnia!";
 		this->nextBtn->Enabled = true;
 		return;
 	}
@@ -143,18 +143,18 @@ System::Void SettingsUC::nextBtn_Click(System::Object^ sender, System::EventArgs
 		command.ExecuteNonQuery();
 		sqlConn.Close();
 
-		MessageBox::Show("Dane zosta³y zmienione pomyœlnie", "Informacja", MessageBoxButtons::OK);
+		MessageBox::Show("Dane zostaly zmienione pomyslnie", "Informacja", MessageBoxButtons::OK);
 	}
 	catch (SqlException^ e) {
 		this->nextBtn->Enabled = true;
 		if (e->Number == 53) {
-			this->settingsErrorLb->Text = "Problem z baz¹ danych. Spróbuj ponownie za kilka minut.";
+			this->settingsErrorLb->Text = "Problem z baza danych. Spróbuj ponownie za kilka minut.";
 			return;
 		}
 		if (e->Number == 2627) {
-			this->settingsErrorLb->Text = "EMail, Numer telefonu jest ju¿ zajêty!";
+			this->settingsErrorLb->Text = "EMail, Numer telefonu jest juz zajety!";
 			return;
 		}
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 }

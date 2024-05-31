@@ -99,7 +99,7 @@ System::Void BillsUC::BillsUC_Load(System::Object^ sender, System::EventArgs^ e)
 		removeBillBtn->Font = (gcnew System::Drawing::Font(L"Franklin Gothic Medium Cond", 12, System::Drawing::FontStyle::Underline));
 		removeBillBtn->Dock = DockStyle::Fill;
 		removeBillBtn->TabIndex = i;
-		removeBillBtn->Text = L"Zamknij istniej¹cy rachunek";
+		removeBillBtn->Text = L"Zamknij istniejacy rachunek";
 		removeBillBtn->UseVisualStyleBackColor = true;
 		removeBillBtn->Click += gcnew System::EventHandler(this, &BillsUC::removeBillBtn_Click);
 

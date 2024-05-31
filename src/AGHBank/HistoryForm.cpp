@@ -114,7 +114,7 @@ System::Void HistoryForm::HistoryForm_Load(System::Object^ sender, System::Event
 		this->historyListTableLayoutPanel->AutoScroll = true;
 	}
 	catch (SqlException^ e) {
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 }
 

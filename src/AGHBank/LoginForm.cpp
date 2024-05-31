@@ -11,7 +11,7 @@ System::Void LoginForm::nextBtn_Click(System::Object^ sender, System::EventArgs^
 	String^ username = this->loginInput->Text;
 	this->loginErrorLb->Text = "";
 	if (username->Length == 0) {
-		this->loginErrorLb->Text = "Nie wpisano nazwy u¿ytkownika!";
+		this->loginErrorLb->Text = "Nie wpisano nazwy uzytkownika!";
 		this->nextBtn->Enabled = true;
 		return;
 	}
@@ -36,7 +36,7 @@ System::Void LoginForm::nextBtn_Click(System::Object^ sender, System::EventArgs^
 		else {
 			person = nullptr;
 			this->nextBtn->Enabled = true;
-			this->loginErrorLb->Text = "Nie istnieje taki u¿ytkownik!";
+			this->loginErrorLb->Text = "Nie istnieje taki uzytkownik!";
 		}
 		reader->Close();
 		sqlConn.Close();
@@ -44,10 +44,10 @@ System::Void LoginForm::nextBtn_Click(System::Object^ sender, System::EventArgs^
 	catch (SqlException^ e) {
 		this->nextBtn->Enabled = true;
 		if (e->Number == 53) {
-			this->loginErrorLb->Text = "Problem z baz¹ danych. Spróbuj ponownie za kilka minut.";
+			this->loginErrorLb->Text = "Problem z baza danych. Spróbuj ponownie za kilka minut.";
 			return;
 		}
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 }
 

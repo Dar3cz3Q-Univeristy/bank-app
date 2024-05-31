@@ -95,7 +95,7 @@ System::Void RegisterForm::nextBtn_Click(System::Object^ sender, System::EventAr
 	}
 
 	if (!PersonDetailsCheck::isAdult(birthDate)) {
-		this->registerErrorLb->Text = "Osoba musi byæ pelnoletnia!";
+		this->registerErrorLb->Text = "Osoba musi byc pelnoletnia!";
 		this->nextBtn->Enabled = true;
 		return;
 	}

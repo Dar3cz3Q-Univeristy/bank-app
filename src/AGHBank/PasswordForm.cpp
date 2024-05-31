@@ -13,7 +13,7 @@ System::Void PasswordForm::nextBtn_Click(System::Object^ sender, System::EventAr
 	this->nextBtn->Enabled = false;
 	String^ password = this->passwordInput->Text;
 	if (password->Length == 0) {
-		this->passwordErrorLb->Text = "Nie wpisano has³a!";
+		this->passwordErrorLb->Text = "Nie wpisano hasla!";
 		this->nextBtn->Enabled = true;
 		return;
 	}
@@ -37,8 +37,8 @@ System::Void PasswordForm::nextBtn_Click(System::Object^ sender, System::EventAr
 			else {
 				auth = false;
 				this->nextBtn->Enabled = true;
-				this->restorePasswordLink->Text = "Odzyskaj has³o";
-				this->passwordErrorLb->Text = "B³êdne has³o!";
+				this->restorePasswordLink->Text = "Odzyskaj haslo";
+				this->passwordErrorLb->Text = "Bledne haslo!";
 			}
 		}
 
@@ -48,10 +48,10 @@ System::Void PasswordForm::nextBtn_Click(System::Object^ sender, System::EventAr
 	catch (SqlException^ e) {
 		this->nextBtn->Enabled = true;
 		if (e->Number == 53) {
-			this->passwordErrorLb->Text = "Problem z baz¹ danych. Spróbuj ponownie za kilka minut.";
+			this->passwordErrorLb->Text = "Problem z baza danych. Spróbuj ponownie za kilka minut.";
 			return;
 		}
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 }
 

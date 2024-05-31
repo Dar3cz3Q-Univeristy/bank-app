@@ -63,7 +63,7 @@ System::Void TransferUC::TransferUC_Load(System::Object^ sender, System::EventAr
 		sqlConn.Close();
 	}
 	catch (SqlException^ e) {
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 }
 
@@ -102,7 +102,7 @@ System::Void TransferUC::startingAccountComboBox_SelectedIndexChanged(System::Ob
 		this->ownBillsComboBox->Enabled = true;
 	}
 	catch (SqlException^ e) {
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 }
 
@@ -172,7 +172,7 @@ System::Void TransferUC::nextBtn_Click(System::Object^ sender, System::EventArgs
 	if (selectedType == 1) {
 		accountNumber = this->accountNumberInput->Text;
 		if (accountNumber->Length != 35) {
-			this->errorLb->Text = "Proszê uzupe³niæ/poprawiæ numer konta!";
+			this->errorLb->Text = "Prosze uzupelnic/poprawic numer konta!";
 			this->nextBtn->Enabled = true;
 			return;
 		}
@@ -180,7 +180,7 @@ System::Void TransferUC::nextBtn_Click(System::Object^ sender, System::EventArgs
 	else {
 		int ownBillSelectedIndex = this->ownBillsComboBox->SelectedIndex;
 		if (ownBillSelectedIndex < 0) {
-			this->errorLb->Text = "Proszê wybraæ rachunek!";
+			this->errorLb->Text = "Prosze wybrac rachunek!";
 			this->nextBtn->Enabled = true;
 			return;
 		}
@@ -189,7 +189,7 @@ System::Void TransferUC::nextBtn_Click(System::Object^ sender, System::EventArgs
 	}
 
 	if (amount->Length == 0) {
-		this->errorLb->Text = "Proszê uzupe³niæ puste pola!";
+		this->errorLb->Text = "Prosze uzupelnic puste pola!";
 		this->nextBtn->Enabled = true;
 		return;
 	}
@@ -210,7 +210,7 @@ System::Void TransferUC::nextBtn_Click(System::Object^ sender, System::EventArgs
 		command.ExecuteNonQuery();
 		sqlConn.Close();
 
-		MessageBox::Show("Pieni¹dze zosta³y przelane pomyœlnie", "Informacja", MessageBoxButtons::OK);
+		MessageBox::Show("Pieniadze zostaly przelane pomyslnie", "Informacja", MessageBoxButtons::OK);
 	}
 	catch (SqlException^ e) {
 		this->nextBtn->Enabled = true;
@@ -219,10 +219,10 @@ System::Void TransferUC::nextBtn_Click(System::Object^ sender, System::EventArgs
 			return;
 		}
 		if (e->Number == 547) {
-			this->errorLb->Text = "Niewystarczaj¹ca iloœæ œrodków!";
+			this->errorLb->Text = "Niewystarczajaca ilosc srodków!";
 			return;
 		}
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 }
 

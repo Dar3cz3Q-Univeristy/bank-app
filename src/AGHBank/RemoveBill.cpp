@@ -25,7 +25,7 @@ System::Void RemoveBill::RemoveBill_Load(System::Object^ sender, System::EventAr
 		}
 	}
 	catch (SqlException^ e) {
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 }
 
@@ -52,12 +52,12 @@ System::Void RemoveBill::removeBillBtn_Click(System::Object^ sender, System::Eve
 		command.ExecuteNonQuery();
 		sqlConn.Close();
 
-		MessageBox::Show("Rachunek zosta³ zamkniêty", "Informacja", MessageBoxButtons::OK);
+		MessageBox::Show("Rachunek zostal zamkniety", "Informacja", MessageBoxButtons::OK);
 
 		this->Close();
 	}
 	catch (SqlException^ e) {
 		this->removeBillBtn->Enabled = true;
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 }

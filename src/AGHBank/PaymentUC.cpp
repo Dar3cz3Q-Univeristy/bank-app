@@ -29,7 +29,7 @@ System::Void PaymentUC::PaymentUC_Load(System::Object^ sender, System::EventArgs
 		sqlConn.Close();
 	}
 	catch (SqlException^ e) {
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 }
 
@@ -62,7 +62,7 @@ System::Void PaymentUC::billsComboBox_SelectedIndexChanged(System::Object^ sende
 		this->currencyComboBox->SelectedIndex = accountCurrencyID - 1;
 	}
 	catch (SqlException^ e) {
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 }
 
@@ -72,7 +72,7 @@ System::Void PaymentUC::nextBtn_Click(System::Object^ sender, System::EventArgs^
 	int selectedCurrencyID = this->currencyComboBox->SelectedIndex;
 	String^ amount = this->amountInput->Text;
 	if (selectedComboID < 0 || selectedCurrencyID < 0 || amount->Length == 0) {
-		this->errorLb->Text = "Proszê uzupe³niæ puste pola!";
+		this->errorLb->Text = "Proszê uzupelnic puste pola!";
 		this->nextBtn->Enabled = true;
 		return;
 	}
@@ -95,15 +95,15 @@ System::Void PaymentUC::nextBtn_Click(System::Object^ sender, System::EventArgs^
 
 		String^ infoType = transactionType == 1 ? "wp³acone" : "wyp³acone";
 
-		MessageBox::Show("Pieni¹dze zosta³y " + infoType + " pomyœlnie", "Informacja", MessageBoxButtons::OK);
+		MessageBox::Show("Pieniadze zostaly " + infoType + " pomyslnie", "Informacja", MessageBoxButtons::OK);
 	}
 	catch (SqlException^ e) {
 		this->nextBtn->Enabled = true;
 		if (e->Number == 547) {
-			this->errorLb->Text = "Niewystarczaj¹ca iloœæ œrodków!";
+			this->errorLb->Text = "Niewystarczajaca ilosc srodków!";
 			return;
 		}
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 }
 

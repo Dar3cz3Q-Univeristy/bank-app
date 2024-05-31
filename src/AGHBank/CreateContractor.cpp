@@ -58,13 +58,13 @@ System::Void CreateContractor::addContractorBtn_Click(System::Object^ sender, Sy
 	String^ accountNumber = this->accountNumberInput->Text;
 
 	if (customName->Length == 0) {
-		this->errorLb->Text = "Proszê uzupe³niæ puste pola!";
+		this->errorLb->Text = "Prosze uzupelnic puste pola!";
 		this->addContractorBtn->Enabled = true;
 		return;
 	}
 
 	if (accountNumber->Length != 35) {
-		this->errorLb->Text = "Proszê uzupe³niæ/poprawiæ numer konta!";
+		this->errorLb->Text = "Prosze uzupelnic/poprawic numer konta!";
 		this->addContractorBtn->Enabled = true;
 		return;
 	}
@@ -83,13 +83,13 @@ System::Void CreateContractor::addContractorBtn_Click(System::Object^ sender, Sy
 		command.ExecuteNonQuery();
 		sqlConn.Close();
 
-		MessageBox::Show("Kontrahent zosta³ utworzony pomyœlnie", "Informacja", MessageBoxButtons::OK);
+		MessageBox::Show("Kontrahent zostal utworzony pomyslnie", "Informacja", MessageBoxButtons::OK);
 
 		sqlConn.Close();
 	}
 	catch (SqlException^ e) {
 		this->addContractorBtn->Enabled = true;
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 	this->Close();
 }

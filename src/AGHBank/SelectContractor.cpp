@@ -55,7 +55,7 @@ System::Void SelectContractor::SelectContractor_Load(System::Object^ sender, Sys
 		sqlConn.Close();
 	}
 	catch (SqlException^ e) {
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 }
 

@@ -16,7 +16,7 @@ System::Void ChangePassword::createBillBtn_Click(System::Object^ sender, System:
 	String^ retypedNewPassword = this->retypedNewPasswordInput->Text;
 
 	if (oldPassword->Length == 0 || newPassword->Length == 0 || retypedNewPassword->Length == 0) {
-		this->errorLb->Text = "Proszê uzupe³niæ puste pola!";
+		this->errorLb->Text = "Prosze uzupelnic puste pola!";
 		return;
 	}
 
@@ -27,12 +27,12 @@ System::Void ChangePassword::createBillBtn_Click(System::Object^ sender, System:
 	bool isPasswordValid = regex_match(passwordString, regexPasswordRule);
 
 	if (!isPasswordValid) {
-		this->errorLb->Text = "Nowe has³o musi posiadaæ od 4 do 16 znaków, du¿¹ literê, ma³¹ literê, liczbê, znak specjalny!";
+		this->errorLb->Text = "Nowe haslo musi posiadac od 4 do 16 znaków, duza litere, mala litere, liczbe, znak specjalny!";
 		return;
 	}
 
 	if (newPassword != retypedNewPassword) {
-		this->errorLb->Text = "Has³a nie s¹ takie same!";
+		this->errorLb->Text = "Hasla nie sa takie same!";
 		return;
 	}
 
@@ -50,7 +50,7 @@ System::Void ChangePassword::createBillBtn_Click(System::Object^ sender, System:
 		if (reader->Read()) {
 			String^ downloadedPassword = reader->GetString(0);
 			if (!bcrypt::validatePassword(ConvertString::toStandardString(oldPassword), ConvertString::toStandardString(downloadedPassword))) {
-				this->errorLb->Text = "Aktualne has³o jest niepoprawne!";
+				this->errorLb->Text = "Aktualne haslo jest niepoprawne!";
 				return;
 			}
 		}
@@ -68,10 +68,10 @@ System::Void ChangePassword::createBillBtn_Click(System::Object^ sender, System:
 		secondCommand.ExecuteNonQuery();
 
 		sqlConn.Close();
-		MessageBox::Show("Has³o zosta³o pomyœlnie zmienione", "Informacja", MessageBoxButtons::OK);
+		MessageBox::Show("Haslo zostalo pomyslnie zmienione", "Informacja", MessageBoxButtons::OK);
 	}
 	catch (SqlException^ e) {
-		MessageBox::Show(e->Message, "B³¹d po³¹czenia", MessageBoxButtons::OK);
+		MessageBox::Show(e->Message, "Blad polaczenia", MessageBoxButtons::OK);
 	}
 	this->Close();
 }
