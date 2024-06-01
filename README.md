@@ -2,14 +2,10 @@
 **AGHBankApp** is final project on the basis of computer science in the 1st semester of studies. Application isn’t endorsed by *Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie* and doesn’t reflect the views or opinions of it.
 
 # Installation
-## By installer
-Download [AGHBank.zip](https://www.mediafire.com/file/iqp9gmyjaid0obe/AGHBank.zip/file) file, unzip it and run "setup.exe". Follow the steps shown on the screen. Program will use prepared online MSSQL database (free tier so it's not the fastest one).
-
-## By GitHub repo
-### In order to run this application, you need MSSQL Server.
+## In order to run this application, you need MSSQL Server.
 1. Clone the repository,
 2. Use "database/Database-script.sql" to create database on your MSSQL Server,
-3. Create "Database.h" file in "src/AGHBank/" folder. Structure of the file is shown below.
+3. Create "Database.h" file in "src/Bank App/src" folder. Structure of the file is shown below.
 4. Compile and run the program. 
 
 ### Note
