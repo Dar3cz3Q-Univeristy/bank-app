@@ -3,7 +3,7 @@
 #include <regex>
 #include <ctime>
 #include "Database.h"
-#include "bcrypt.h"
+#include "bcrypt/bcrypt.h"
 #include "StringConversion.h"
 #include "PersonDetailsConstraints.h"
 

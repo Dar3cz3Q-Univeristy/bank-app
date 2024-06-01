@@ -96,6 +96,7 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>4996;4267</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(SolutionDir)Bank App\src\vendor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
@@ -108,6 +109,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Bank App\src\vendor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
@@ -117,6 +119,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Bank App\src\vendor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
@@ -127,6 +130,7 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>4996;4267</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(SolutionDir)Bank App\src\vendor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
@@ -144,134 +148,70 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AccountUC.cpp" />
-    <ClCompile Include="bcrypt.cpp" />
-    <ClCompile Include="BillsUC.cpp" />
-    <ClCompile Include="blowfish.cpp" />
-    <ClCompile Include="ChangePassword.cpp" />
-    <ClCompile Include="ContractorsUC.cpp" />
-    <ClCompile Include="CreateBill.cpp" />
-    <ClCompile Include="CreateContractor.cpp" />
-    <ClCompile Include="HistoryForm.cpp" />
-    <ClCompile Include="LoginForm.cpp" />
-    <ClCompile Include="MainForm.cpp" />
-    <ClCompile Include="PasswordForm.cpp" />
-    <ClCompile Include="PaymentUC.cpp" />
-    <ClCompile Include="Program.cpp" />
-    <ClCompile Include="RegisterForm.cpp" />
-    <ClCompile Include="RemoveBill.cpp" />
-    <ClCompile Include="SelectContractor.cpp" />
-    <ClCompile Include="SettingsUC.cpp" />
-    <ClCompile Include="TransferUC.cpp" />
+    <ClCompile Include="src\AccountUC.cpp" />
+    <ClCompile Include="src\BillsUC.cpp" />
+    <ClCompile Include="src\ChangePassword.cpp" />
+    <ClCompile Include="src\ContractorsUC.cpp" />
+    <ClCompile Include="src\CreateBill.cpp" />
+    <ClCompile Include="src\CreateContractor.cpp" />
+    <ClCompile Include="src\HistoryForm.cpp" />
+    <ClCompile Include="src\LoginForm.cpp" />
+    <ClCompile Include="src\MainForm.cpp" />
+    <ClCompile Include="src\PasswordForm.cpp" />
+    <ClCompile Include="src\PaymentUC.cpp" />
+    <ClCompile Include="src\Program.cpp" />
+    <ClCompile Include="src\RegisterForm.cpp" />
+    <ClCompile Include="src\RemoveBill.cpp" />
+    <ClCompile Include="src\SelectContractor.cpp" />
+    <ClCompile Include="src\SettingsUC.cpp" />
+    <ClCompile Include="src\TransferUC.cpp" />
+    <ClCompile Include="src\vendor\bcrypt\bcrypt.cpp" />
+    <ClCompile Include="src\vendor\bcrypt\blowfish.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AccountUC.h">
-      <FileType>CppControl</FileType>
-    </ClInclude>
-    <ClInclude Include="ArrayCheck.h" />
-    <ClInclude Include="bcrypt.h" />
-    <ClInclude Include="BillsUC.h">
-      <FileType>CppControl</FileType>
-    </ClInclude>
-    <ClInclude Include="ChangePassword.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="ComboItem.h" />
-    <ClInclude Include="ContractorsUC.h">
-      <FileType>CppControl</FileType>
-    </ClInclude>
-    <ClInclude Include="CreateBill.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="CreateContractor.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="Database.h" />
-    <ClInclude Include="HistoryForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="LoginForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="MainForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="node_blf.h" />
-    <ClInclude Include="openbsd.h" />
-    <ClInclude Include="PasswordForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="PaymentUC.h">
-      <FileType>CppControl</FileType>
-    </ClInclude>
-    <ClInclude Include="PersonDetailsConstraints.h" />
-    <ClInclude Include="RegisterForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="RemoveBill.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="SelectContractor.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="SettingsUC.h">
-      <FileType>CppControl</FileType>
-    </ClInclude>
-    <ClInclude Include="StringConversion.h" />
-    <ClInclude Include="TransferUC.h">
-      <FileType>CppControl</FileType>
-    </ClInclude>
-    <ClInclude Include="User.h" />
+    <ClInclude Include="src\AccountUC.h" />
+    <ClInclude Include="src\ArrayCheck.h" />
+    <ClInclude Include="src\BillsUC.h" />
+    <ClInclude Include="src\ChangePassword.h" />
+    <ClInclude Include="src\ComboItem.h" />
+    <ClInclude Include="src\ContractorsUC.h" />
+    <ClInclude Include="src\CreateBill.h" />
+    <ClInclude Include="src\CreateContractor.h" />
+    <ClInclude Include="src\Database.h" />
+    <ClInclude Include="src\HistoryForm.h" />
+    <ClInclude Include="src\LoginForm.h" />
+    <ClInclude Include="src\MainForm.h" />
+    <ClInclude Include="src\PasswordForm.h" />
+    <ClInclude Include="src\PaymentUC.h" />
+    <ClInclude Include="src\PersonDetailsConstraints.h" />
+    <ClInclude Include="src\RegisterForm.h" />
+    <ClInclude Include="src\RemoveBill.h" />
+    <ClInclude Include="src\SelectContractor.h" />
+    <ClInclude Include="src\SettingsUC.h" />
+    <ClInclude Include="src\StringConversion.h" />
+    <ClInclude Include="src\TransferUC.h" />
+    <ClInclude Include="src\User.h" />
+    <ClInclude Include="src\vendor\bcrypt\bcrypt.h" />
+    <ClInclude Include="src\vendor\bcrypt\node_blf.h" />
+    <ClInclude Include="src\vendor\bcrypt\openbsd.h" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AccountUC.resx">
-      <DependentUpon>AccountUC.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BillsUC.resx">
-      <DependentUpon>BillsUC.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ChangePassword.resx">
-      <DependentUpon>ChangePassword.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ContractorsUC.resx">
-      <DependentUpon>ContractorsUC.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CreateBill.resx">
-      <DependentUpon>CreateBill.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CreateContractor.resx">
-      <DependentUpon>CreateContractor.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HistoryForm.resx">
-      <DependentUpon>HistoryForm.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PasswordForm.resx">
-      <DependentUpon>PasswordForm.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PaymentUC.resx">
-      <DependentUpon>PaymentUC.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RegisterForm.resx">
-      <DependentUpon>RegisterForm.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemoveBill.resx">
-      <DependentUpon>RemoveBill.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SelectContractor.resx">
-      <DependentUpon>SelectContractor.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SettingsUC.resx">
-      <DependentUpon>SettingsUC.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TransferUC.resx">
-      <DependentUpon>TransferUC.h</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="AccountUC.resx" />
+    <EmbeddedResource Include="BillsUC.resx" />
+    <EmbeddedResource Include="ChangePassword.resx" />
+    <EmbeddedResource Include="ContractorsUC.resx" />
+    <EmbeddedResource Include="CreateBill.resx" />
+    <EmbeddedResource Include="CreateContractor.resx" />
+    <EmbeddedResource Include="HistoryForm.resx" />
+    <EmbeddedResource Include="LoginForm.resx" />
+    <EmbeddedResource Include="MainForm.resx" />
+    <EmbeddedResource Include="PasswordForm.resx" />
+    <EmbeddedResource Include="PaymentUC.resx" />
+    <EmbeddedResource Include="RegisterForm.resx" />
+    <EmbeddedResource Include="RemoveBill.resx" />
+    <EmbeddedResource Include="SelectContractor.resx" />
+    <EmbeddedResource Include="SettingsUC.resx" />
+    <EmbeddedResource Include="TransferUC.resx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

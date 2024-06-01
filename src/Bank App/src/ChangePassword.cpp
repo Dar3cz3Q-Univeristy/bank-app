@@ -2,7 +2,7 @@
 #include <string>
 #include <regex>
 #include "Database.h"
-#include "bcrypt.h"
+#include "bcrypt/bcrypt.h"
 #include "StringConversion.h"
 #include "PersonDetailsConstraints.h"
 

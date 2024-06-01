@@ -24,7 +24,7 @@ System::Void AccountUC::AccountUC_Load(System::Object^ sender, System::EventArgs
 			randomAccountID = reader->GetInt32(3);
 			int genderCheck = stoi(ConvertString::toStandardString(reader->GetString(4)));
 			if (genderCheck % 2 == 0) {
-				personPictureBox->Image = (cli::safe_cast<System::Drawing::Image^>(gcnew Bitmap("img\\women.png")));
+				personPictureBox->Image = (cli::safe_cast<System::Drawing::Image^>(gcnew Bitmap("res\\img\\women.png")));
 			}
 		}
 

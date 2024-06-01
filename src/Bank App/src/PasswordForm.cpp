@@ -1,7 +1,7 @@
 #include "PasswordForm.h"
 #include "Database.h"
 #include "StringConversion.h"
-#include "bcrypt.h"
+#include "bcrypt/bcrypt.h"
 
 using namespace AGHBank;
 
