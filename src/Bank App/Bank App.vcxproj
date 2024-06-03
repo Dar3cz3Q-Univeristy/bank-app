@@ -169,27 +169,59 @@
     <ClCompile Include="src\vendor\bcrypt\blowfish.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\AccountUC.h" />
+    <ClInclude Include="src\AccountUC.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
     <ClInclude Include="src\ArrayCheck.h" />
-    <ClInclude Include="src\BillsUC.h" />
-    <ClInclude Include="src\ChangePassword.h" />
+    <ClInclude Include="src\BillsUC.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="src\ChangePassword.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="src\ComboItem.h" />
-    <ClInclude Include="src\ContractorsUC.h" />
-    <ClInclude Include="src\CreateBill.h" />
-    <ClInclude Include="src\CreateContractor.h" />
+    <ClInclude Include="src\ContractorsUC.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
+    <ClInclude Include="src\CreateBill.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="src\CreateContractor.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="src\Database.h" />
-    <ClInclude Include="src\HistoryForm.h" />
-    <ClInclude Include="src\LoginForm.h" />
-    <ClInclude Include="src\MainForm.h" />
-    <ClInclude Include="src\PasswordForm.h" />
-    <ClInclude Include="src\PaymentUC.h" />
+    <ClInclude Include="src\HistoryForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="src\LoginForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="src\MainForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="src\PasswordForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="src\PaymentUC.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
     <ClInclude Include="src\PersonDetailsConstraints.h" />
-    <ClInclude Include="src\RegisterForm.h" />
-    <ClInclude Include="src\RemoveBill.h" />
-    <ClInclude Include="src\SelectContractor.h" />
-    <ClInclude Include="src\SettingsUC.h" />
+    <ClInclude Include="src\RegisterForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="src\RemoveBill.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="src\SelectContractor.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="src\SettingsUC.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
     <ClInclude Include="src\StringConversion.h" />
-    <ClInclude Include="src\TransferUC.h" />
+    <ClInclude Include="src\TransferUC.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
     <ClInclude Include="src\User.h" />
     <ClInclude Include="src\vendor\bcrypt\bcrypt.h" />
     <ClInclude Include="src\vendor\bcrypt\node_blf.h" />

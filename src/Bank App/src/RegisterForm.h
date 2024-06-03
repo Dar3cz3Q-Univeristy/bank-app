@@ -82,7 +82,6 @@ namespace AGHBank {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-            System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(RegisterForm::typeid));
             this->haveAccountLink = (gcnew System::Windows::Forms::LinkLabel());
             this->panel2 = (gcnew System::Windows::Forms::Panel());
             this->helpPersonalLb = (gcnew System::Windows::Forms::Label());
@@ -132,10 +131,10 @@ namespace AGHBank {
                 static_cast<System::Byte>(238)));
             this->haveAccountLink->Location = System::Drawing::Point(1399, 856);
             this->haveAccountLink->Name = L"haveAccountLink";
-            this->haveAccountLink->Size = System::Drawing::Size(168, 29);
+            this->haveAccountLink->Size = System::Drawing::Size(167, 29);
             this->haveAccountLink->TabIndex = 12;
             this->haveAccountLink->TabStop = true;
-            this->haveAccountLink->Text = L"Mam ju¿ konto";
+            this->haveAccountLink->Text = L"Mam juz konto";
             this->haveAccountLink->LinkClicked += gcnew System::Windows::Forms::LinkLabelLinkClickedEventHandler(this, &RegisterForm::noAccountLink_LinkClicked);
             // 
             // panel2
@@ -635,7 +634,6 @@ namespace AGHBank {
             // 
             // logoBox
             // 
-            this->logoBox->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"logoBox.Image")));
             this->logoBox->Location = System::Drawing::Point(0, 0);
             this->logoBox->Name = L"logoBox";
             this->logoBox->Size = System::Drawing::Size(148, 120);
@@ -667,7 +665,6 @@ namespace AGHBank {
             this->Controls->Add(this->haveAccountLink);
             this->Controls->Add(this->panel2);
             this->Controls->Add(this->panel1);
-            this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
             this->MinimumSize = System::Drawing::Size(1600, 950);
             this->Name = L"RegisterForm";
             this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
